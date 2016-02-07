@@ -6,11 +6,11 @@
 - Workflow would be managed with the Dr, Google docs and git would be used
 
 ### Tasks :
-[ ] Start discovering Meteor [ Install and follow some sample tutorials ]    
+- [ ] Start discovering Meteor [ Install and follow some sample tutorials ]    
 
-[ ] Build a simple application (**DEADLINE 10 - Feb**)    
+- [ ] Build a simple application (**DEADLINE 10 - Feb**)    
 
-[ ] Prepare the main parts of the application, start discussing to show on next meeting (**DEADLINE 10 - Feb**)    
+- [ ] Prepare the main parts of the application, start discussing to show on next meeting (**DEADLINE 10 - Feb**)    
 
 ### Progress :
 
