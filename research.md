@@ -1,6 +1,11 @@
-#### [Meteor vs Sails][meteor-sails]
+### Framework alternatives and comparision :
+- [Meteor vs Sails][meteor-sails]
 
-[best practices in meteor file structure and code organization ][meteor-structure]
+### Structuring meteor project :
+- meteor exampels on github
+- [best practices in meteor file structure and code organization ][meteor-structure-01]
+- [3 things you should know about meteor structure][meteor-structure-02]
 
 [meteor-sails]: http://stackoverflow.com/questions/22202286/sails-js-vs-meteor-what-are-the-advantages-of-both
-[meteor-structure]: http://fourkitchens.com/blog/article/structuring-meteor-applications
+[meteor-structure-01]: http://fourkitchens.com/blog/article/structuring-meteor-applications
+[meteor-structure-02]:https://www.codementor.io/meteor/tutorial/3-things-know-structure-meteor-application
