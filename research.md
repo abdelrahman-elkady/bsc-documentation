@@ -6,6 +6,9 @@
 - [best practices in meteor file structure and code organization ][meteor-structure-01]
 - [3 things you should know about meteor structure][meteor-structure-02]
  
+### Desgin patterns and planning :
+- Flux design pattern
+
 ----------------
 
 ### Uncategorized : 
