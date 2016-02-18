@@ -9,6 +9,9 @@
 ### Desgin patterns and planning :
 - Flux design pattern
 
+### Git :
+- [Git branch model][git-branch-model]
+
 ----------------
 
 ### Uncategorized : 
@@ -21,3 +24,4 @@
 [meteor-structure-01]: http://fourkitchens.com/blog/article/structuring-meteor-applications
 [meteor-structure-02]:https://www.codementor.io/meteor/tutorial/3-things-know-structure-meteor-application
 [collection-access-vs-methods]:https://www.discovermeteor.com/blog/meteor-methods-client-side-operations/
+[git-branch-model]:http://nvie.com/posts/a-successful-git-branching-model/
