@@ -12,6 +12,8 @@
 
 ### Git :
 - [Git branch model][git-branch-model]
+- [Feature branch workflow][feature-branch]
+- [Rebase or merge ? ][rebase-vs-merge]
 
 ----------------
 
@@ -27,3 +29,5 @@
 [collection-access-vs-methods]:https://www.discovermeteor.com/blog/meteor-methods-client-side-operations/
 [git-branch-model]:http://nvie.com/posts/a-successful-git-branching-model/
 [large-app-structure]:https://blog.tableflip.io/large-meteor-projects-best-practices/
+[feature-branch]:https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
+[rebase-vs-merge]:https://www.atlassian.com/git/tutorials/merging-vs-rebasing/workflow-walkthrough
