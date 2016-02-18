@@ -2,10 +2,11 @@
 - [Meteor vs Sails][meteor-sails]
 
 ### Structuring meteor project :
-- meteor exampels on github
-- [best practices in meteor file structure and code organization ][meteor-structure-01]
+- Meteor exampels on github
+- [Best practices in meteor file structure and code organization ][meteor-structure-01]
 - [3 things you should know about meteor structure][meteor-structure-02]
- 
+- [Large meteor apps structure][large-app-structure]
+
 ### Desgin patterns and planning :
 - Flux design pattern
 
@@ -25,3 +26,4 @@
 [meteor-structure-02]:https://www.codementor.io/meteor/tutorial/3-things-know-structure-meteor-application
 [collection-access-vs-methods]:https://www.discovermeteor.com/blog/meteor-methods-client-side-operations/
 [git-branch-model]:http://nvie.com/posts/a-successful-git-branching-model/
+[large-app-structure]:https://blog.tableflip.io/large-meteor-projects-best-practices/
