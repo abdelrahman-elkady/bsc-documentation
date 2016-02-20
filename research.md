@@ -18,6 +18,7 @@
 ### Using EcmaScript6 :
 - [Using ES6 in meteor][es6-meteor]
 - [Ecmascript](https://atmospherejs.com/meteor/ecmascript) and [es5-shim](https://atmospherejs.com/meteor/es5-shim) are in meteor apps by default now
+- [Real world ES6 examples][es6-meteor-examples]
 
 ----------------
 
@@ -36,3 +37,4 @@
 [feature-branch]:https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
 [rebase-vs-merge]:https://www.atlassian.com/git/tutorials/merging-vs-rebasing/workflow-walkthrough
 [es6-meteor]:https://medium.com/@dferber90/es6-in-meteor-5e088c998e4a#.bz00j0ilk
+[es6-meteor-examples]:https://medium.com/@dferber90/real-world-es6-examples-in-meteor-a834c6073daa#.nz33itce5
