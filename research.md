@@ -7,6 +7,7 @@
 - [3 things you should know about meteor structure][meteor-structure-02]
 - [Large meteor apps structure][large-app-structure]
 - [Meteor data flow][meteor-data-flow]
+- [Template level subscription][template-subscription]
 
 ### Desgin patterns and planning :
 - Flux design pattern
@@ -40,3 +41,4 @@
 [es6-meteor]:https://medium.com/@dferber90/es6-in-meteor-5e088c998e4a#.bz00j0ilk
 [es6-meteor-examples]:https://medium.com/@dferber90/real-world-es6-examples-in-meteor-a834c6073daa#.nz33itce5
 [meteor-data-flow]:https://medium.com/meteor-js/data-flow-from-the-database-to-the-ui-three-layers-of-meteor-d5e208b466c3#.ogmg2zu8h
+[template-subscription]:https://www.discovermeteor.com/blog/template-level-subscriptions/
