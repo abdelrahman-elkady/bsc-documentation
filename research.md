@@ -30,6 +30,7 @@
 
 ### Uncategorized : 
 - [Meteor collections allow/deny vs methods][collection-access-vs-methods]
+- [Common meteor mistakes][common-mistakes]
 
 
 
@@ -47,3 +48,4 @@
 [meteor-data-flow]:https://medium.com/meteor-js/data-flow-from-the-database-to-the-ui-three-layers-of-meteor-d5e208b466c3#.ogmg2zu8h
 [template-subscription]:https://www.discovermeteor.com/blog/template-level-subscriptions/
 [optimize-subs]:https://meteorhacks.com/meteor-subscription-optimizations/
+[common-mistakes]:https://dweldon.silvrback.com/common-mistakes
