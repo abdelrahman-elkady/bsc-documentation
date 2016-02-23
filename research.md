@@ -22,6 +22,10 @@
 - [Ecmascript](https://atmospherejs.com/meteor/ecmascript) and [es5-shim](https://atmospherejs.com/meteor/es5-shim) are in meteor apps by default now
 - [Real world ES6 examples][es6-meteor-examples]
 
+### Subscription & Publications :
+- [Optimizing subscriptions][optimize-subs]
+
+
 ----------------
 
 ### Uncategorized : 
@@ -42,3 +46,4 @@
 [es6-meteor-examples]:https://medium.com/@dferber90/real-world-es6-examples-in-meteor-a834c6073daa#.nz33itce5
 [meteor-data-flow]:https://medium.com/meteor-js/data-flow-from-the-database-to-the-ui-three-layers-of-meteor-d5e208b466c3#.ogmg2zu8h
 [template-subscription]:https://www.discovermeteor.com/blog/template-level-subscriptions/
+[optimize-subs]:https://meteorhacks.com/meteor-subscription-optimizations/
