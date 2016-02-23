@@ -24,6 +24,7 @@
 
 ### Subscription & Publications :
 - [Optimizing subscriptions][optimize-subs]
+- [Workaround for deep merging conflicting subscriptions][deep-merge-workaround]
 
 
 ----------------
@@ -49,3 +50,4 @@
 [template-subscription]:https://www.discovermeteor.com/blog/template-level-subscriptions/
 [optimize-subs]:https://meteorhacks.com/meteor-subscription-optimizations/
 [common-mistakes]:https://dweldon.silvrback.com/common-mistakes
+[deep-merge-workaround]:https://medium.com/@MaxDubrovin/workaround-for-meteor-limitations-if-you-want-to-sub-for-more-nested-fields-of-already-received-docs-eb3fdbfe4e07#.nafqguvkd
