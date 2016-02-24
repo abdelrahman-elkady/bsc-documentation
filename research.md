@@ -31,6 +31,10 @@
 - Using mupx with env configuration and settings.json
 
 
+### Security : 
+- [Meteor Security 101][security-101]
+- [Meteor Security 201][security-201]
+
 ----------------
 
 ### Uncategorized : 
@@ -57,3 +61,5 @@
 [common-mistakes]:https://dweldon.silvrback.com/common-mistakes
 [deep-merge-workaround]:https://medium.com/@MaxDubrovin/workaround-for-meteor-limitations-if-you-want-to-sub-for-more-nested-fields-of-already-received-docs-eb3fdbfe4e07#.nafqguvkd
 [meteor-guards]:https://dweldon.silvrback.com/guards
+[security-101]:http://joshowens.me/meteor-security-101/
+[security-201]:http://joshowens.me/meteor-security-201/
