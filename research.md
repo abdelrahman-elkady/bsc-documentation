@@ -27,6 +27,10 @@
 - [Workaround for deep merging conflicting subscriptions][deep-merge-workaround]
 
 
+### Deployment :
+- Using mupx with env configuration and settings.json
+
+
 ----------------
 
 ### Uncategorized : 
