@@ -34,6 +34,11 @@
 ### Security : 
 - [Meteor Security 101][security-101]
 - [Meteor Security 201][security-201]
+ 
+### Methods and Latency compensation :
+- [Methods vs client side operations][methods-vs-operations]
+- [Latency Compensation][latency-compensation]
+- [Advanced Latency Compensation][advanced-latency-compensation]
 
 ----------------
 
@@ -63,3 +68,6 @@
 [meteor-guards]:https://dweldon.silvrback.com/guards
 [security-101]:http://joshowens.me/meteor-security-101/
 [security-201]:http://joshowens.me/meteor-security-201/
+[methods-vs-operations]:https://www.discovermeteor.com/blog/meteor-methods-client-side-operations/
+[latency-compensation]:https://www.discovermeteor.com/blog/latency-compensation/
+[advanced-latency-compensation]:https://www.discovermeteor.com/blog/advanced-latency-compensation/
