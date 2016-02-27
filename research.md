@@ -29,6 +29,7 @@
 
 ### Deployment :
 - Using mupx with env configuration and settings.json
+- [Using CDNs with meteor][meteor-cdns]
 
 
 ### Security : 
@@ -73,3 +74,4 @@
 [latency-compensation]:https://www.discovermeteor.com/blog/latency-compensation/
 [advanced-latency-compensation]:https://www.discovermeteor.com/blog/advanced-latency-compensation/
 [security-sacha]:https://www.discovermeteor.com/blog/meteor-and-security/
+[meteor-cdns]:http://joshowens.me/using-a-cdn-with-your-production-meteor-app/
