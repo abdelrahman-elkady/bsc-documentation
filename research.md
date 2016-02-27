@@ -8,6 +8,7 @@
 - [Large meteor apps structure][large-app-structure]
 - [Meteor data flow][meteor-data-flow]
 - [Template level subscription][template-subscription]
+- [Using admin app as microservice][admin-microservice]
 
 ### Desgin patterns and planning :
 - Flux design pattern
@@ -75,3 +76,4 @@
 [advanced-latency-compensation]:https://www.discovermeteor.com/blog/advanced-latency-compensation/
 [security-sacha]:https://www.discovermeteor.com/blog/meteor-and-security/
 [meteor-cdns]:http://joshowens.me/using-a-cdn-with-your-production-meteor-app/
+[admin-microservice]:http://joshowens.me/building-an-admin-app-as-a-microservice-with-meteor-js/
