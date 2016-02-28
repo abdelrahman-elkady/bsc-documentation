@@ -43,6 +43,11 @@
 - [Latency Compensation][latency-compensation]
 - [Advanced Latency Compensation][advanced-latency-compensation]
 
+### Data !!! :
+- [Mixpanel analytics with meteor][mixpanel-meteor]
+
+
+
 ----------------
 
 ### Uncategorized : 
@@ -77,3 +82,4 @@
 [security-sacha]:https://www.discovermeteor.com/blog/meteor-and-security/
 [meteor-cdns]:http://joshowens.me/using-a-cdn-with-your-production-meteor-app/
 [admin-microservice]:http://joshowens.me/building-an-admin-app-as-a-microservice-with-meteor-js/
+[mixpanel-meteor]:https://themeteorchef.com/snippets/using-mixpanel-with-meteor/
