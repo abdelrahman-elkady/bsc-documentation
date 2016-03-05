@@ -22,6 +22,7 @@
 - [Using ES6 in meteor][es6-meteor]
 - [Ecmascript](https://atmospherejs.com/meteor/ecmascript) and [es5-shim](https://atmospherejs.com/meteor/es5-shim) are in meteor apps by default now
 - [Real world ES6 examples][es6-meteor-examples]
+- [More on ES6 from meteor info][meteor-info-es6]
 
 ### Subscription & Publications :
 - [Optimizing subscriptions][optimize-subs]
@@ -68,6 +69,7 @@
 [rebase-vs-merge]:https://www.atlassian.com/git/tutorials/merging-vs-rebasing/workflow-walkthrough
 [es6-meteor]:https://medium.com/@dferber90/es6-in-meteor-5e088c998e4a#.bz00j0ilk
 [es6-meteor-examples]:https://medium.com/@dferber90/real-world-es6-examples-in-meteor-a834c6073daa#.nz33itce5
+[meteor-info-es6]:http://info.meteor.com/blog/es2015-get-started
 [meteor-data-flow]:https://medium.com/meteor-js/data-flow-from-the-database-to-the-ui-three-layers-of-meteor-d5e208b466c3#.ogmg2zu8h
 [template-subscription]:https://www.discovermeteor.com/blog/template-level-subscriptions/
 [optimize-subs]:https://meteorhacks.com/meteor-subscription-optimizations/
