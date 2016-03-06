@@ -46,6 +46,11 @@
 
 ### Data !!! :
 - [Mixpanel analytics with meteor][mixpanel-meteor]
+ 
+
+### Gamification and Reward system :
+- [Starter video][https://www.youtube.com/watch?v=MuDLw1zIc94]
+
 
 
 
