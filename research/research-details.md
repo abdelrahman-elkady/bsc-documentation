@@ -7,17 +7,5 @@ As mentioned in [Josh Owens' article][josh-cdn] **CloudFront** have some problem
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 [josh-cdn]:http://joshowens.me/using-a-cdn-with-your-production-meteor-app/
 [cloudflare-free]:https://aws.amazon.com/cloudfront/pricing/
