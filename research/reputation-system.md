@@ -67,7 +67,7 @@
 
 ----------
 # Our implementation and plan :
-  Mainly our work would be
+  Mainly our work should be easily modifiable and upgradeable, some of the proposed could be processed into production this year, however most of the point system should be prepared for next years .
 
 ### Key points we need to be in our system :
 
@@ -86,13 +86,45 @@
 - Code Warrior
 - Duilingo
 
-### How we are going to achieve those goals ? :
+### How we are going to achieve those goals ?
+
+We have 4 main definitions/elements [ Reputation points, Cash/Coins, Store, Achievements ]
+
+We also have 2 contexts, Team and individual ones, Teams holds the Cash/Coins while individuals holds XP/Rep points
+
+#### Asking a new question :
+  - Teams have **n Free questions** per milestone/week then they have to pay from their **Coins** in order to get more question slots .
+  - Any member who asks a question will consume one slot of the team's available slots .
+
+#### Upvoting a question :
+  - The user who asked the question will gain XP .
+  - The team will gain cash when each **n upvotes** in their total question upvotes .
+  - (DISCUSS) Each member of the team will get some XP boost on upvotes too .
+
+#### Downvoting a question :
+  - After some question downvotes, team will lose a question slot .
+  - (DISCUSS) The User who **Downvotes** a Question will have a slight XP decreasing .
+  - (DISCUSS) The team members of the **Downvoter** will have a slight XP Decrease .
+
+#### Upvoting an answer :
+  - Individual --> Increasing the XP
+  - Team --> Increase the cash after n upvotes on answers
+
+#### Downvoting an answer :
+  - Individual --> Decreasing the XP
+  - Team --> Decrease the XP of all members slightly
+
+#### Choosing a best answer :
+  - Add cash to the team answered the answer .
+  - Increase XP of all members of that team .
+  - Slight increase of the XP of the team who asked the question .
+  - Increase XP of the individual who answered .
 
 
 
 
+-----
 
-
-#### Resources :
+### Resources :
 
 - [Building web reputation systems O'Reilly](https://books.google.com.eg/books?hl=en&lr=&id=MXJ5iB7BS_0C&oi=fnd&pg=PR2&dq=achievements+in+reputation+systems&ots=i7ktsa3A3M&sig=n7tGleIGBK_Fh4FL0dRA961u8ow&redir_esc=y#v=onepage&q=achievements%20in%20reputation%20systems&f=false)
