@@ -52,6 +52,8 @@
 - [Starter video][https://www.youtube.com/watch?v=MuDLw1zIc94]
 
 
+### Schemas and Implementation techniques :
+- [Implementing readable notifications][readable-notifications]
 
 
 ----------------
@@ -96,3 +98,4 @@
 [github-res-meteor-learn]: https://github.com/ericdouglas/Meteor-Learning
 [reactivity]:https://www.discovermeteor.com/blog/reactivity-basics-meteors-magic-demystified/
 [reactive-vars]:http://meteorcapture.com/a-look-at-local-template-state/
+[readable-notifications]:http://nl.discovermeteor.com/chapters/notifications/
