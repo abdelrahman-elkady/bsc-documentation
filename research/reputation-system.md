@@ -33,7 +33,7 @@
 ### [Discovering Value from Community Activity on Focused Question Answering Sites: A Case Study of Stack Overflow](https://www.cs.cornell.edu/home/kleinber/kdd12-qa.pdf)
 
 
-### [Wikipedia's reputation system **wikiTrust**](Reputation Systems for Open Collaboration)
+### [Wikipedia's reputation system **wikiTrust**](http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36757.pdf)
 
 ### [Immunizing Online Reputation Reporting Systems Against Unfair Ratings and Discriminatory Behavior **More focused on eShopping**](http://sieci.pjwstk.edu.pl/media/bibl/%5BDellarocas%5D_%5BImmunizing%20Online%5D_%5BACM%5D_%5B2000%5D.pdf)
 
