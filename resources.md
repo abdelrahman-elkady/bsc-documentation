@@ -13,6 +13,9 @@
 ### Desgin patterns and planning :
 - Flux design pattern
 
+#### Database : 
+- [Data model design for mongodb][datamodel-mongo]
+
 ### Git :
 - [Git branch model][git-branch-model]
 - [Feature branch workflow][feature-branch]
@@ -99,3 +102,4 @@
 [reactivity]:https://www.discovermeteor.com/blog/reactivity-basics-meteors-magic-demystified/
 [reactive-vars]:http://meteorcapture.com/a-look-at-local-template-state/
 [readable-notifications]:http://nl.discovermeteor.com/chapters/notifications/
+[datamodel-mongo]:https://docs.mongodb.org/manual/MongoDB-data-models-guide-master.pdf
