@@ -15,6 +15,7 @@
 
 #### Database : 
 - [Data model design for mongodb][datamodel-mongo]
+- [Meteor Publish composite package - Handling the problem of reactivity in publish][meteor-publish-composite]
 
 ### Git :
 - [Git branch model][git-branch-model]
@@ -103,3 +104,4 @@
 [reactive-vars]:http://meteorcapture.com/a-look-at-local-template-state/
 [readable-notifications]:http://nl.discovermeteor.com/chapters/notifications/
 [datamodel-mongo]:https://docs.mongodb.org/manual/MongoDB-data-models-guide-master.pdf
+[meteor-publish-composite]:http://braindump.io/meteor/2014/09/12/publishing-reactive-joins-in-meteor.html
