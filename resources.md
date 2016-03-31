@@ -9,7 +9,7 @@
 - [Meteor data flow][meteor-data-flow]
 - [Template level subscription][template-subscription]
 - [Using admin app as microservice][admin-microservice]
-- [Application structure in 1.3]:http://guide.meteor.com/structure.html
+- [Application structure in 1.3][application-structure-1.3]
 
 ### Desgin patterns and planning :
 - Flux design pattern
@@ -116,3 +116,4 @@
 [digital-ocean-deploy]:https://www.digitalocean.com/community/tutorials/how-to-deploy-a-meteor-js-application-on-ubuntu-14-04-with-nginx
 [scotch-deploy]:https://scotch.io/tutorials/building-a-slack-clone-in-meteor-js-part-5-deployment
 [meteor-1.3-migration]:http://guide.meteor.com/1.3-migration.html
+[application-structure-1.3]:http://guide.meteor.com/structure.html
