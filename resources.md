@@ -9,6 +9,7 @@
 - [Meteor data flow][meteor-data-flow]
 - [Template level subscription][template-subscription]
 - [Using admin app as microservice][admin-microservice]
+- [Application structure in 1.3]:http://guide.meteor.com/structure.html
 
 ### Desgin patterns and planning :
 - Flux design pattern
