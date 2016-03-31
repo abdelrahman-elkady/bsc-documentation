@@ -61,6 +61,12 @@
 - [Implementing readable notifications][readable-notifications]
 
 
+### Meteor 1.3 :
+- [Migration Guide][meteor-1.3-migration]
+
+
+
+
 ----------------
 
 ### Uncategorized :
@@ -108,3 +114,4 @@
 [meteor-publish-composite]:http://braindump.io/meteor/2014/09/12/publishing-reactive-joins-in-meteor.html
 [digital-ocean-deploy]:https://www.digitalocean.com/community/tutorials/how-to-deploy-a-meteor-js-application-on-ubuntu-14-04-with-nginx
 [scotch-deploy]:https://scotch.io/tutorials/building-a-slack-clone-in-meteor-js-part-5-deployment
+[meteor-1.3-migration]:http://guide.meteor.com/1.3-migration.html
