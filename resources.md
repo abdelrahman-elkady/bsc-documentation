@@ -9,9 +9,14 @@
 - [Meteor data flow][meteor-data-flow]
 - [Template level subscription][template-subscription]
 - [Using admin app as microservice][admin-microservice]
+- [Application structure in 1.3][application-structure-1.3]
 
 ### Desgin patterns and planning :
 - Flux design pattern
+
+#### Database : 
+- [Data model design for mongodb][datamodel-mongo]
+- [Meteor Publish composite package - Handling the problem of reactivity in publish][meteor-publish-composite]
 
 ### Git :
 - [Git branch model][git-branch-model]
@@ -32,7 +37,8 @@
 ### Deployment :
 - Using mupx with env configuration and settings.json
 - [Using CDNs with meteor][meteor-cdns]
-
+- [Digital Ocean Guide][digital-ocean-deploy]
+- [Scotch.io guide][scotch-deploy]
 
 ### Security :
 - [Meteor Security 101][security-101]
@@ -54,6 +60,12 @@
 
 ### Schemas and Implementation techniques :
 - [Implementing readable notifications][readable-notifications]
+
+
+### Meteor 1.3 :
+- [Migration Guide][meteor-1.3-migration]
+
+
 
 
 ----------------
@@ -99,3 +111,9 @@
 [reactivity]:https://www.discovermeteor.com/blog/reactivity-basics-meteors-magic-demystified/
 [reactive-vars]:http://meteorcapture.com/a-look-at-local-template-state/
 [readable-notifications]:http://nl.discovermeteor.com/chapters/notifications/
+[datamodel-mongo]:https://docs.mongodb.org/manual/MongoDB-data-models-guide-master.pdf
+[meteor-publish-composite]:http://braindump.io/meteor/2014/09/12/publishing-reactive-joins-in-meteor.html
+[digital-ocean-deploy]:https://www.digitalocean.com/community/tutorials/how-to-deploy-a-meteor-js-application-on-ubuntu-14-04-with-nginx
+[scotch-deploy]:https://scotch.io/tutorials/building-a-slack-clone-in-meteor-js-part-5-deployment
+[meteor-1.3-migration]:http://guide.meteor.com/1.3-migration.html
+[application-structure-1.3]:http://guide.meteor.com/structure.html
