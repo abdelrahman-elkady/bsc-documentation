@@ -1,0 +1,24 @@
+{
+  "name": "bcs-documentation",
+  "version": "1.0.0",
+  "description": "Documenting my BCs. !",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdelrahman-elkady/bcs-documentation.git"
+  },
+  "author": "abdelrahman elkady <elkadyabdelrahman@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abdelrahman-elkady/bcs-documentation/issues"
+  },
+  "homepage": "https://github.com/abdelrahman-elkady/bcs-documentation#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-shell": "^1.3.0"
+  }
+}
