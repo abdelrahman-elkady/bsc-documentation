@@ -1,5 +1,4 @@
-all:
-	cleanbuild
+all: cleanbuild
 
 cleanbuild:
 	latexmk -pdf bachelor.tex && latexmk -c
@@ -9,3 +8,5 @@ pdf:
 
 clean:
 	latexmk -c
+	rm GUC-logo-ss-eps-converted-to.pdf
+	rm bachelor.bbl
