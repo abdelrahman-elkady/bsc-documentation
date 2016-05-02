@@ -25,7 +25,11 @@ module.exports = function (grunt) {
     },
 
     watch: {
-      files: ['thesis/bachelor.tex'],
+      files: [
+        'thesis/bachelor.tex',
+        'thesis/partials/*.tex',
+        'thesis/partials/*.bib',
+      ],
       tasks: ['shell:compile', 'shell:clean'],
     },
 
