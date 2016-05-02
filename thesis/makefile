@@ -8,5 +8,5 @@ pdf:
 
 clean:
 	latexmk -c
-	rm GUC-logo-ss-eps-converted-to.pdf
-	rm bachelor.bbl
+	rm -f GUC-logo-ss-eps-converted-to.pdf
+	rm -f bachelor.bbl
