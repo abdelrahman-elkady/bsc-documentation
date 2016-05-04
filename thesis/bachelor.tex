@@ -22,18 +22,16 @@
 \usepackage{ifpdf}
 % \setlength{\parindent}{0pt}
 
-\newcommand{\submissionDay}{XX}
-\newcommand{\submissionMonth}{July}
-\newcommand{\submissionYear}{20XX}
+\newcommand{\submissionDay}{15}
+\newcommand{\submissionMonth}{May}
+\newcommand{\submissionYear}{2016}
 \newcommand{\submissionDate}{\submissionDay~\submissionMonth,~\submissionYear}
 \newcommand{\typeOfThesis}{Bachelor Thesis}
 
-\newcommand{\titleOfThesisOne}{Bachelor Thesis Title}
+\newcommand{\titleOfThesis}{CSEN603 Management System - Back End}
 
-\newcommand{\authorOfThesis}{Abdelrahman Elkady}
-\newcommand{\supervisorOne}{Sup 1}
-\newcommand{\supervisorTwo}{Sup 2}
-\newcommand{\supervisorThree}{Sup 3}
+\newcommand{\authorOfThesis}{Abdelrahman Hesham Elkady}
+\newcommand{\supervisor}{Dr. Amr Farouk Desouky}
 
 \newcommand{\includefig}[4]{
     \begin{figure}[ht]
@@ -65,7 +63,7 @@
 \ifpdf
 \pdfinfo {
 	/Author (\authorOfThesis)
-	/Title (\titleOfThesisOne)
+	/Title (\titleOfThesis)
 	/Subject (\typeOfThesis)
 	/Keywords ()
 	/CreationDate (D:20090707085533)
@@ -82,6 +80,7 @@
 \include{partials/acknowledgments}
 
 \include{partials/abstract}
+
 \tableofcontents
 % \addcontentsline{toc}{chapter}{Contents}
 \clearpage
@@ -90,10 +89,8 @@
 \pagenumbering{arabic}
 
 % \setlength\parskip{15pt}
-\setlength\parskip{.5\baselineskip plus .2\baselineskip
-	minus .4\baselineskip}
+\setlength\parskip{.5\baselineskip plus .2\baselineskip minus .4\baselineskip}
 % \setlength\parskip{.5\baselineskip \@plus .1\baselineskip \@minus ..1\baselineskip}
-
 
 \include{partials/introduction}
 \include{partials/background}
@@ -105,7 +102,7 @@
 \include{partials/appendix}
 
 \bibliographystyle{plain}
-\bibliography{bachelor}
+\bibliography{partials/bachelor}
 \addcontentsline{toc}{chapter}{References}
 
 \end{document}
