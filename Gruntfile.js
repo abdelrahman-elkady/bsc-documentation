@@ -15,7 +15,7 @@ module.exports = function (grunt) {
       },
 
       compile: {
-        command: 'make'
+        command: 'make pdf'
       },
 
       clean: {
