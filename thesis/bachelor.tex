@@ -34,9 +34,9 @@
 \newcommand{\supervisor}{Dr. Amr Farouk Desouky}
 
 \newcommand{\includefig}[4]{
-    \begin{figure}[ht]
+    \begin{figure}[H]
      \centering
-      \includegraphics[width=#1\textwidth]{images/#2}
+      \includegraphics[width=#1\textwidth]{assets/images/#2}
       \caption{#3}
       \label{#4}
     \end{figure}
@@ -45,7 +45,7 @@
 \newcommand{\includefigWSC}[5]{
     \begin{figure}[ht]
      \centering
-      \includegraphics[width=#1\textwidth]{images/#2}
+      \includegraphics[width=#1\textwidth]{assets/images/#2}
       \caption[#3]{#4}
       \label{#5}
     \end{figure}
@@ -57,6 +57,11 @@
 
 \newcommand{\includeepsWSC}[5]{
 \includefigWSC{#1}{#2.eps}{#3}{#4}{#5}
+}
+
+\newcommand{\newParagraph}{
+\vspace{\baselineskip}
+\noindent
 }
 
 
