@@ -10,14 +10,14 @@ functionality of the proposed system.
 \ac{se} is a team oriented course that needs a lot of management and data collection, the course had been through many iterations through previous years
 to reach the current structure, it is mainly focused on the software development process, including both technical and project management
 technologies and tools, \ac{se} is based on the agile development process, which means that teams are created and a scrum master is chosen to manage
-and lead the team; The scrum process is discussed later in chapter \ref{chap:background}.
+and lead the team; The scrum process is discussed later in chapter~\ref{chap:background}.
 
 \section{Motivation}
 \label{sec:motivation}
 
 \ac{se} was managed through \ac{met} faculty portal, allowing instructor to post materials,
 create announcements on the course dashboard, the \ac{met} portal handles course announcements and material listing, However other
-mangerial processes are handled through different providers, in the next sections we are discussing the main items that requires
+managerial processes are handled through different providers, in the next sections we are discussing the main items that requires
 additional service providers than the \ac{met} portal to manage.
 
 \includefig{0.75}{met-course-dashboard.png}{\ac{met} portal course dashboard}{fig:met-course-dashboard}
@@ -31,9 +31,9 @@ help the instructors to manage the flow of the teams and their work throughout t
 forms using an external providers like Google Forms.
 
 \newParagraph
-This had some problems, first, distributing the form to studetns, the form was usually sent via Email,
+This had some problems, first, distributing the form to students, the form was usually sent via Email,
 resulting in some problems of reachability when some students can have problem with their Email provider so they can not receive
-the announcement, the other problem was the retrival of the data, it was messy and hard for instructors to retrive
+the announcement, the other problem was the retrieval of the data, it was messy and hard for instructors to retrieve
 the data collected from the forms easily later during the course.
 
 \subsection{Team Creation and Management}
@@ -60,4 +60,25 @@ it is not enough to use emails, and the \ac{met} portal provides an outdated for
 
 \newParagraph
 Moreover, the instructors have to answer duplicate questions as there is no history of answered questions, some instructors share
-spreadsheet with the students to keep track of old questions and answers trying to eliminate the duplication. 
+spreadsheet with the students to keep track of old questions and answers trying to eliminate the duplication.
+
+\section{Main Goals}
+\label{sec:main-goals}
+Work on this project started after the \ac{se} course had started already, given that students have technical sessions before
+engaging their practical work, we kept some goals to achieve starting from first day of the project
+\begin{itemize}
+  \item Find solutions for the main problems related to course management
+  \item Build that system as fast as possible, to not block the course schedule
+  \item Release new versions often, allowing more important services of the system to be in production in time
+  \item Ensure that sensitive information for both course and individuals are not accessible by attackers
+  \item Build a user friendly system for both students and administrators
+\end{itemize}
+
+\section{Thesis Organization}
+\label{sec:thesis-organization}
+\begin{itemize}
+  \item Chapter~\ref{chap:intro} - Introduction : In this chapter, we have a quick overview about the course, the problems
+  we are trying to solve and the main goals we are maintaining throughout the system design.
+  \item Chapter~\ref{chap:background} - Background : This chapter lists the main definitions and introduces the main points that
+  are needed to understand the context, technologies and implementation techniques of the system.
+\end{itemize}
