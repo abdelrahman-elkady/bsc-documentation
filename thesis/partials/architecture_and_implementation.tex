@@ -30,6 +30,13 @@ called mupx~\cite{mupx}, However, having a docker container with meteor applicat
 that is beacuse we are dealing with local storage on our server as we do not use any external storage server, making it hard to migrate between
 different deployments while preserving our local filesystem without problems.
 
+\section{Analytics}
+\label{sec:analytics}
+
+\ac{sems} uses MixPanel\texttrademark{} as the main analytic and tracking tool, using analytics.js~\cite{analytics_js} MixPanel\texttrademark{} is
+integrated in the system, allowing tracking page views, feature usage and custom events, this improved the evaluation of changes applied on the
+system by measuring user interaction and involvement with new features.
+
 \newParagraph
 The deployment finally was done using Meteor's build tool, that allows bundling the application and producing an application that is ready
 to run in a NodeJS environment, this allowed us to easily build and deploy our application quickly, specially when hotfixes are applied,
@@ -66,4 +73,9 @@ it easier for students to access it. The Schedule module lists all the course ma
 is influenced by the \ac{met} portal course schedule, it displays the materials by the week set in course schedule, also it allows the user
 to filter by the material type. The upload problem faced on the \ac{met} portal is solved by allowing the instructor to choose between uploading
 the materials or just linking to an outside source, allowing the instructor to have more flexibility to handle the material posted on the system.
+Instructors can delete posted materials or edit it on the schedule at any time, changing its details and even changing the type of the material from
+uploaded to a direct link and vice-versa.
 \includefig{0.85}{sems-schedule-edit.png}{\ac{sems} Schedule Edit}{fig:sems-schedule-edit}
+
+\subsection{Teams}
+\label{sub:teams}
