@@ -1,0 +1,23 @@
+\chapter{Architecture and Implementation}
+\label{chap:architecture_and_implementation}
+
+In this chapter we have the implementation and the architecture of \ac{sems}, showing the main system modules, design decisions,
+problems and impediments and their solutions and the design approaches taken during the implementation of \ac{sems}.
+
+\section{Framework Selection}
+\label{sec:framework_selection}
+Before starting the implementation of the project, we examined some frameworks, most of them are \ac{js} ( NodeJS ) based;
+this is due to the current state of \ac{js} community where one can find a well structured and maintained projects and modules.
+
+\newParagraph
+We started to do a quick tests and comparisons between Express.js, Hapi.js, Sails.js and meteor.js; the main goal was to have a stable
+and functional system in the shortest period possible, that was required because \ac{sems} was planned to be used in the same year, forcing
+us to have a production-ready application within 2 weeks of the project start.
+
+\newParagraph
+With that in mind, we chose meteor.js as our main framework, supported with blaze templating engine for the views, and mongoDB as the
+database system, allowing us to push forward and focus on system design quickly while maintaining a stable application and framework
+to be ready for production releases.
+
+\section{Deployment}
+\label{sec:deployment}
