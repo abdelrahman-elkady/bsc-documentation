@@ -21,3 +21,49 @@ to be ready for production releases.
 
 \section{Deployment}
 \label{sec:deployment}
+We had tested 2 deployment techniques during the implementation of the project, the main goal was to have smooth deployments frequently with
+the new features, while maintaining the stability of the system with minimum downtime and quick recovery in case of crashes or bugs.
+
+\newParagraph
+First trail was to have a docker container hosting our meteor application on the server, the deployment was easy to be done with a tool
+called mupx~\cite{mupx}, However, having a docker container with meteor application was not the best choice for us to recover from downtimes,
+that is beacuse we are dealing with local storage on our server as we do not use any external storage server, making it hard to migrate between
+different deployments while preserving our local filesystem without problems.
+
+\newParagraph
+The deployment finally was done using Meteor's build tool, that allows bundling the application and producing an application that is ready
+to run in a NodeJS environment, this allowed us to easily build and deploy our application quickly, specially when hotfixes are applied,
+and also it helped us to recover from problems that can affect our server filesystem by easily backing up the directories and files frequently.
+
+
+\section{System Modules}
+\label{sec:modules}
+
+In this section, we discover the main modules of \ac{sems}, with implementation notes on specific parts.
+\includefig{0.85}{sems-landing-page.png}{\ac{sems} Landing Page}{fig:sems-landing-page}
+
+\subsection{User Registration}
+\label{sub:registration}
+Users module is the very first module that was constructed on the system, enabling students and instructors to register with their
+university emails, and providing basic information that is needed throughout the course, this includes the university ID, the study group
+and more contact information for reachability and performance tracking. To ensure that the students are registered with their correct email
+address, most system services are locked until the user verifies his email address. A password reset request can be initiated by the user
+in case of password loss to reset his password.
+\includefig{0.85}{sems-registration.png}{\ac{sems} Registration Form}{fig:sems-registration}
+
+\newParagraph
+Each user can access his profile page, edit his basic information and add an avatar to his profile. To have a better connection
+between students and instructors, everyone can see the public profile of other users if he is logged in on the system, the user
+can determine what to show on his public profile through the profile edit page, also if the user is enrolled in a team, the team
+is linked on his public profile automatically.
+\includefig{0.85}{sems-public-profile.png}{\ac{sems} user profile}{fig:sems-public-profile}
+
+\subsection{Course Schedule}
+\label{sub:schedule}
+\includefig{0.85}{sems-schedule.png}{\ac{sems} Schedule View}{fig:sems-schedule}
+The schedule is used for course material posting, it is the only public main service that is accessible without registration in order to make
+it easier for students to access it. The Schedule module lists all the course material, including lectures, assignments and code snippets. The schedule
+is influenced by the \ac{met} portal course schedule, it displays the materials by the week set in course schedule, also it allows the user
+to filter by the material type. The upload problem faced on the \ac{met} portal is solved by allowing the instructor to choose between uploading
+the materials or just linking to an outside source, allowing the instructor to have more flexibility to handle the material posted on the system.
+\includefig{0.85}{sems-schedule-edit.png}{\ac{sems} Schedule Edit}{fig:sems-schedule-edit}
