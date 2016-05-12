@@ -157,7 +157,6 @@ On \ac{sems} instructors can publish announcements and milestones to students, t
 is that an announcement is a short and informative announcement, and it is expected that announcements are released
 more often than milestones. On the other hand, milestones are expected to be a sprint description or a requirement update,
 it's expected to be detailed and may contain code snippets, lot of links and lists and are expected to be released infrequently.
-\includefig{0.75}{sems-milestone-display.png}{Part of a milestone displayed for all teams}{fig:sems-milestone-display}
 
 \newParagraph
 Both Announcements and Milestones allows the usage of markdown syntax, allowing the instructor to insert links, images, emphasize important
@@ -173,7 +172,45 @@ teams.
 \includefig{0.75}{sems-admin-announcement.png}{Admin Announcement Panel}{fig:sems-admin-announcement}
 
 \newParagraph
+The announcements can be deleted or edited anytime from the admin panel, the editing will affect all the teams who have access to this announcement,
+Also, an announcement could be restricted from global to specific teams and vice-versa.
+
+\newParagraph
 Whenever an announcement is made, a notification is sent throughout \ac{sems} notification system to all students who are in the target
 of the announcement, so, if the announcement is global, a notification would be sent to all members of all teams, and if the announcement
 was restricted to some teams, the notification would appear to all members of the targeted teams only, notifications are discussed more in
 REFERENCE HERE.
+
+\subsection{Announcements}
+\label{sub:announcements}
+As mentioned before, the instructors can publish announcements to different teams, the announcements and milestones are accessible through the
+team page, announcements are displayed as a stack of non-expandable information, with the date of the announcement. Milestones on the other hand are
+displayed as a separate cards holding a short preview of the milestone, and is expandable as shown in \ref{fig:sems-milestone-display} to view
+the whole milestone details, this is because milestones are usually longer than announcements, and usually they contain code snippets and sometimes
+images.
+
+\includefig{0.75}{sems-announcements-display.png}{Announcement list on team page}{fig:sems-announcements-display}
+\includefig{0.75}{sems-milestone-display.png}{Part of a milestone displayed for all teams}{fig:sems-milestone-display}
+
+\subsection{Discussions}
+\label{sub:discussions}
+The discussions module aim is to reduce the time taken to reach other students or staff when a user seek help, or when he/she needs
+clarification about some part in the course, the discussion section is consisting of questions, answers and comments. Mimicking the
+design of question and answers services, the discussions section is simple enough, with support to markdown, code highlighting, voting, tags and
+best answers marking, it provides some useful tools to ask a question easily. The discussion module briefly consists of the following components :
+
+\subsubsection{Question Browser}
+\label{subs:question-browser}
+All Questions are listed and paginated in the main discussions page, allowing users to ask new question, search the current questions, up and
+downvote questions and check the view and answer count for each question.
+\includefig{0.75}{sems-discussions-main.png}{Question Browser}{fig:sems-discussions-main}
+
+\newParagraph
+To improve the performance of question navigation and search, the search index is manipulated on the server, allowing the client to subscribe to
+the documents in an efficient way by subscribing to the documents on the current page only, and request more whenever the user chooses another page.
+
+\subsubsection{Question Creation}
+\label{subs:question-creation}
+The user can ask a question by toggling the question creation form displayed in \ref{fig:sems-question-form}, where he can
+write his question with markdown support and apply tags, the help icon displays a guide for markdown usage.
+\includefig{0.75}{sems-question-form.png}{Question Creation From}{fig:sems-question-form}
