@@ -49,8 +49,8 @@ and also it helped us to recover from problems that can affect our server filesy
 In this section, we discover the main modules of \ac{sems}, with implementation notes on specific parts.
 \includefig{0.85}{sems-landing-page.png}{\ac{sems} Landing Page}{fig:sems-landing-page}
 
-\subsection{User Registration}
-\label{sub:registration}
+\subsection{Users}
+\label{sub:users}
 Users module is the very first module that was constructed on the system, enabling students and instructors to register with their
 university emails, and providing basic information that is needed throughout the course, this includes the university ID, the study group
 and more contact information for reachability and performance tracking. To ensure that the students are registered with their correct email
@@ -64,6 +64,19 @@ between students and instructors, everyone can see the public profile of other u
 can determine what to show on his public profile through the profile edit page, also if the user is enrolled in a team, the team
 is linked on his public profile automatically.
 \includefig{0.85}{sems-public-profile.png}{\ac{sems} user profile}{fig:sems-public-profile}
+
+\newParagraph
+\ac{sems} have different roles for users, which is modifiable by administrators, those roles are :
+
+\begin{description}[align=left]
+\item [student] The default role upon user creation, a student can be added to teams, and can only create content in discussion section,
+student does not have any administrative abilities.
+\item [scrum master] A student that have authority over his team, he is allowed to create, add, remove members and modify data of his team.
+\item [\ac{jta}] JTAs have access to teams, all announcements and milestones and they can modify and delete questions and answers on discussion section
+\item [\ac{ta}] TAs have access to all of the above (Except Team Creation) and they have access to modify schedule and announcements.
+\item [Instructor] Instructors have access to all of the above (Except Team Creation) and they can modify and create milestones.
+\item [Admin] Admin can modify everything on the system, including removing users and modifying member roles.
+\end{description}
 
 \subsection{Course Schedule}
 \label{sub:schedule}
@@ -79,3 +92,39 @@ uploaded to a direct link and vice-versa.
 
 \subsection{Teams}
 \label{sub:teams}
+\ac{se} is a team oriented course, course layout is structured upon teams, that is why team creation, modification and traversing is an
+important module of the system. Team module have multiple views, there is an instructor, scrum master, member and non member view, each
+allows access to specific parts of the team based on the role, in the following sections we have a look on the different features and views
+in Teams.
+
+\subsubsection{Team Creation}
+\label{subs:team-creation}
+This view is only accessible by the scrum master if he/she did not create any teams yet, allowing the scrum master to choose the airline company
+to work with and choose a name for his team, the scrum master is also asked to provide the GitHub repository of the team that will hold
+their codebase.
+\includefig{0.4}{sems-team-creation.png}{\ac{sems} Team Creation View}{fig:sems-team-creation}
+
+\subsubsection{Team browse}
+\label{subs:team-browse}
+When a user navigate through teams tab, all teams are listed in this view, with some information about each team like their deployed application
+IP address, their ionic ID \quotes{discussed in REFERENCE THE SECTION} and the number of members in the team, the user can click on a team to
+be directed to that team page, there are 3 cases that could happen :
+\begin{itemize}
+  \item The user is a not a member of the team : The team page will only show the team name, company and the members in the team as in
+  figure \ref{fig:sems-team-about}, all other team information is locked and not accessible for that user.
+  \item The user is a member of the team : The team page will show the team information, and additionally a side bar is shown
+  giving access to milestones, announcements and grades of that team \quotes{discussed in section REFERENCE HERE}.
+  \item The user is a member and the scrum master of the team or the user have administrative role : The previous view is shown with an extra
+  option to access the team settings panel which is shown in \ref{subs:team-settings}.
+\end{itemize}
+\includefig{0.65}{sems-team-about.png}{\ac{sems} Team Information}{fig:sems-team-about}
+\includefig{0.65}{sems-edit-team.png}{\ac{sems} Team Editing Panel}{fig:sems-edit-team}
+
+\subsubsection{Team Settings}
+\label{subs:team-settings}
+After creating a team, the team Scrum Master or System Administrators can access the team edit panel, as shown in figure \ref{fig:sems-edit-team}
+this panel allows the user
+to change the team data, add or remove members. The \quotes{Add Members} dropdown displays all users on the system with a \quotes{student} role
+who are not enrolled in any team yet. Once a member is added to the team, an Email is sent informing that user with his team name
+and that he joined the team successfully, and a badge is added on his public profile linking to the team he had joined, also, his name
+is not available to be chosen again in other teams.
