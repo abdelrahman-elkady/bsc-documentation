@@ -42,6 +42,11 @@ The deployment finally was done using Meteor's build tool, that allows bundling 
 to run in a NodeJS environment, this allowed us to easily build and deploy our application quickly, specially when hotfixes are applied,
 and also it helped us to recover from problems that can affect our server filesystem by easily backing up the directories and files frequently.
 
+\section{Student Interaction}
+\label{sec:student-interaction}
+The source code of this system was hosted on GitHub\texttrademark{} on a public repositories, allowing students to submit issues, help with
+suggestions and track the way it was built, also students are provided with an Email to contact the development team about issues related
+to the system. During the development of the project some students helped by submitting the issues they faced and providing suggestions.
 
 \section{System Modules}
 \label{sec:modules}
@@ -102,12 +107,12 @@ in Teams.
 This view is only accessible by the scrum master if he/she did not create any teams yet, allowing the scrum master to choose the airline company
 to work with and choose a name for his team, the scrum master is also asked to provide the GitHub repository of the team that will hold
 their codebase.
-\includefig{0.4}{sems-team-creation.png}{\ac{sems} Team Creation View}{fig:sems-team-creation}
+\includefig{0.65}{sems-team-creation.png}{\ac{sems} Team Creation View}{fig:sems-team-creation}
 
 \subsubsection{Team browse}
 \label{subs:team-browse}
 When a user navigate through teams tab, all teams are listed in this view, with some information about each team like their deployed application
-IP address, their ionic ID \quotes{discussed in REFERENCE THE SECTION} and the number of members in the team, the user can click on a team to
+IP address, their ionic ID \quotes{discussed in \ref{subs:team-settings}} and the number of members in the team, the user can click on a team to
 be directed to that team page, there are 3 cases that could happen :
 \begin{itemize}
   \item The user is a not a member of the team : The team page will only show the team name, company and the members in the team as in
@@ -123,8 +128,52 @@ be directed to that team page, there are 3 cases that could happen :
 \subsubsection{Team Settings}
 \label{subs:team-settings}
 After creating a team, the team Scrum Master or System Administrators can access the team edit panel, as shown in figure \ref{fig:sems-edit-team}
-this panel allows the user
-to change the team data, add or remove members. The \quotes{Add Members} dropdown displays all users on the system with a \quotes{student} role
-who are not enrolled in any team yet. Once a member is added to the team, an Email is sent informing that user with his team name
-and that he joined the team successfully, and a badge is added on his public profile linking to the team he had joined, also, his name
-is not available to be chosen again in other teams.
+this panel allows the user to change the team data, add or remove members. The \quotes{Add Members} dropdown displays all users on the system
+with a \quotes{student} role who are not enrolled in any team yet. Once a member is added to the team, an Email is sent informing that user
+with his team name and that he joined the team successfully, and a badge is added on his public profile linking to the team he had joined,
+also, his name is not available to be chosen again in other teams. Users can add the IP of their deployed application, and the ionic ID of their
+mobile application to be displayed on their team page, that allows teams to share its public product with each other.
+
+\subsection{Administrator Panel}
+\label{sub:admin-panel}
+Administrators can access and modify everything on the system, this is done through the administration panel, whenever an admin logs in
+a new item is available in the navigation bar for the admin panel shown in figure \ref{fig:sems-admin-panel}
+\includefig{0.75}{sems-admin-panel.png}{\ac{sems} Admin Panel}{fig:sems-admin-panel}
+\newParagraph
+The admin panel have some options that allows the administrator to modify different sections of the system, we are going
+to navigate through 2 options which are the user management and announcement management, as the schedule edit is a shortcut to modify
+the schedule which was discussed previously, and the other 2 options are related to another bachelor project.
+
+\subsubsection{User Management}
+\label{subs:admin-users}
+In this page the admin can list all the users on the system, users are searchable, admin can remove users and the role of any user
+can be upgraded. The user panel uses a server side search index, in order to load only few users on the client side and request more
+users to be loaded, this is discussed in section REFERENCE HERE when we target the security and performance of the system.
+\includefig{0.75}{sems-admin-users.png}{\ac{sems} User Management}{fig:sems-admin-users}
+
+\subsubsection{Announcement Management}
+\label{subs:announcement-management}
+On \ac{sems} instructors can publish announcements and milestones to students, the main difference between them
+is that an announcement is a short and informative announcement, and it is expected that announcements are released
+more often than milestones. On the other hand, milestones are expected to be a sprint description or a requirement update,
+it's expected to be detailed and may contain code snippets, lot of links and lists and are expected to be released infrequently.
+\includefig{0.75}{sems-milestone-display.png}{Part of a milestone displayed for all teams}{fig:sems-milestone-display}
+
+\newParagraph
+Both Announcements and Milestones allows the usage of markdown syntax, allowing the instructor to insert links, images, emphasize important
+parts and mark quoted text. Moreover, code highlighting is supported, enabling addition of code snippets in announcements and milestones. Generally,
+code blocks are expected to appear in milestones as mentioned before, however instructors can use inline code blocks to highlight specific parts
+in an announcement too.
+
+\newParagraph
+Instructor can write markdown directly when he create a new announcement, he/she chooses whether this announcement should be published
+as a normal announcement or as a milestone, also, the instructor can specify specific teams to view this announcement/milestone in case
+this is specific to some teams only, or the announcement can be denoted as a \quotes{global} announcement which sends it to all
+teams.
+\includefig{0.75}{sems-admin-announcement.png}{Admin Announcement Panel}{fig:sems-admin-announcement}
+
+\newParagraph
+Whenever an announcement is made, a notification is sent throughout \ac{sems} notification system to all students who are in the target
+of the announcement, so, if the announcement is global, a notification would be sent to all members of all teams, and if the announcement
+was restricted to some teams, the notification would appear to all members of the targeted teams only, notifications are discussed more in
+REFERENCE HERE.
