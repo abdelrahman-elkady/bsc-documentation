@@ -229,3 +229,62 @@ To provide students with feedback on their performance, a gradebook module is im
 user can see a detailed schema of his team grades, and receive his individual grade. The grades are still inserted through a backend
 script as there is no user interface developed for it yet.
 \includefig{0.75}{sems-grades.png}{Gradebook}{fig:sems-grades}
+
+\subsection{Hall Of Fame}
+\label{sub:hall-of-fame}
+The hall of fame holds the winning teams of previous years, this module is done to keep track of winning teams, show appreciation and to
+be incentive and motivational for current students to win the competition of the year.
+
+\subsection{Notifications}
+\label{sub:notifications}
+The notification system is implemented to keep the users updated with changes on the system, the notification module is
+simply a document in the database holding the textual content, an optional link to the event, a reference to the user who will receive this
+notification and a flag indicating if the notification is read by this user. With the current schema and the reactiveness of meteor,
+any notification can be sent easily with simple insertion, for example this is a notification sent to the question owner
+after getting an answer
+\vspace{15cm}
+\begin{minted}{js}
+Notifications.insert({
+  ownerId: question.ownerId,
+  content: `${icon} ${content}`,
+  link: link,
+  read: false,
+  createdAt: Date.now()
+});
+\end{minted}
+
+\newParagraph
+Where icon and content are \ac{js} variables, as content supports html rendering, font icons could be passed
+for notifications. Unread notification count is displayed on the user's navigation bar, with quick preview of latest notifications dropdown,
+by clicking on \quotes{see all} button, the user is directed to a full history of his notifications as shown in \ref{fig:sems-notifications-history}
+and options to clear his history and mark all of his notifications as read.
+\includefig{0.75}{sems-notifications.png}{Notifications}{fig:sems-notifications}
+\includefig{0.75}{sems-notifications-history.png}{Notifications History}{fig:sems-notifications-history}
+
+\newParagraph
+Notifications are sent on different events on the system, while it is extensible for more events, the current notifications system notifies
+users on the following events :
+\begin{itemize}
+  \item New Announcement for team
+  \item New Milestone for team
+  \item New Answer on a question the user asked
+  \item New Comment on a question the user asked
+  \item New Comment on a question or answer the user commented on before
+  \item New Up or Downvote on a question or answer
+  \item When an answer made by user is marked as best answer by question owner
+\end{itemize}
+
+\subsection{Slack\texttrademark{} Integration}
+\label{sub:slack}
+As mentioned before, all students and instructors are invited to join a Slack\texttrademark{} team in the beginning of the course,
+the usage of Slack\texttrademark{} throughout the course appeared to be efficient, that is why we had implemented a Slack\texttrademark{} bot using
+Slack\texttrademark{}'s Incoming Webhooks, the bot is used to notify students on major updates on slack, in order to eliminate the
+problem that the students should check the system multiple times to lookup for new announcements and/or updates in the current announcements
+
+\newParagraph
+The Slack\texttrademark{} bot was simply a connection between Slack\texttrademark{} Team and the system, it sends updates and notifies
+users in general channel when a new update is on the system, currently, the bot notifies the users about new questions, also, it mentions all
+the members on the channel when an new milestone or announcement is posted, and if an existing announcement is updated by the instructor.
+
+\includefig{0.75}{sems-slack-question.png}{Bot notifications on new Question}{fig:sems-slack-question}
+\includefig{0.75}{sems-slack-announcement.png}{Bot notifications on new Announcement}{fig:sems-slack-announcement}

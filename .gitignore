@@ -2,3 +2,6 @@
 thesis/bachelor.pdf
 node_modules/
 thesis.zip
+
+# Minted tmp files
+_minted-bachelor/

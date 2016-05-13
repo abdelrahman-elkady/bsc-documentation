@@ -1,10 +1,10 @@
 all: cleanbuild
 
 cleanbuild:
-	latexmk -pdf bachelor.tex && latexmk -c
+	latexmk -r latexmake.rc -pdf bachelor.tex && latexmk -c
 
 pdf:
-	latexmk -pdf bachelor.tex
+	latexmk -r latexmake.rc -pdf bachelor.tex
 
 clean:
 	latexmk -c
