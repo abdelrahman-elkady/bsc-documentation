@@ -118,7 +118,7 @@ be directed to that team page, there are 3 cases that could happen :
   \item The user is a not a member of the team : The team page will only show the team name, company and the members in the team as in
   figure \ref{fig:sems-team-about}, all other team information is locked and not accessible for that user.
   \item The user is a member of the team : The team page will show the team information, and additionally a side bar is shown
-  giving access to milestones, announcements and grades of that team \quotes{discussed in section REFERENCE HERE}.
+  giving access to milestones, announcements and grades of that team.
   \item The user is a member and the scrum master of the team or the user have administrative role : The previous view is shown with an extra
   option to access the team settings panel which is shown in \ref{subs:team-settings}.
 \end{itemize}
@@ -148,7 +148,7 @@ the schedule which was discussed previously, and the other 2 options are related
 \label{subs:admin-users}
 In this page the admin can list all the users on the system, users are searchable, admin can remove users and the role of any user
 can be upgraded. The user panel uses a server side search index, in order to load only few users on the client side and request more
-users to be loaded, this is discussed in section REFERENCE HERE when we target the security and performance of the system.
+users to be loaded, this is discussed in section \ref{sec:security} when we target the security and performance of the system.
 \includefig{0.75}{sems-admin-users.png}{\ac{sems} User Management}{fig:sems-admin-users}
 
 \subsubsection{Announcement Management}
@@ -178,8 +178,8 @@ Also, an announcement could be restricted from global to specific teams and vice
 \newParagraph
 Whenever an announcement is made, a notification is sent throughout \ac{sems} notification system to all students who are in the target
 of the announcement, so, if the announcement is global, a notification would be sent to all members of all teams, and if the announcement
-was restricted to some teams, the notification would appear to all members of the targeted teams only, notifications are discussed more in
-REFERENCE HERE.
+was restricted to some teams, the notification would appear to all members of the targeted teams only, notifications are more explained in
+\ref{sub:notifications}.
 
 \subsection{Announcements}
 \label{sub:announcements}
@@ -288,3 +288,91 @@ the members on the channel when an new milestone or announcement is posted, and 
 
 \includefig{0.75}{sems-slack-question.png}{Bot notifications on new Question}{fig:sems-slack-question}
 \includefig{0.75}{sems-slack-announcement.png}{Bot notifications on new Announcement}{fig:sems-slack-announcement}
+
+\section{Security and Performance}
+\label{sec:security}
+Generally, due to he fast pace of development of the system to provide functionalities and services at time, only basic performance
+practices were followed, that means that the system is not fully optimized for large amount of users, yet the current number
+of users and data is not that huge to slow down the system. However, we tried to make the system secure enough to not allow users to
+view sensitive and confidential data of each other, or access services that they are not authorized to use.
+
+\newParagraph
+Meteor uses a client side database client called minimongo, allowing sharing some documents from the database with the client, this
+data resides on that client to improve performance and enhance the user experience instead of waiting for the server request to be
+completed~\cite{meteor_minimongo}. Bringing data into minimongo is done using a publication/subscription technique, allowing
+the server to publish specific documents, and the client to subscribe to specific publications based on the current template and
+route.
+
+\newParagraph
+In order to limit security vulnerabilities on the system, almost all client side database interaction is limited to admins or completely
+disabled, this is done within the allow/deny rules in meteor collections, for example this is a snippet of allow/deny rules for Notifications
+collection, disabling notification insertion completely from client side to avoid possible spam or data flood, also ensuring that no one
+can modify or remove any notification except he is the owner of the notification itself.
+
+\begin{minted}{js}
+Notifications.allow({
+  insert(userId, doc) {
+    return false;
+  },
+
+  update(userId, doc) {
+    return Meteor.userId() === doc.ownerId;
+  },
+
+  remove(userId, doc) {
+    return Meteor.userId() === doc.ownerId;
+  }
+});
+\end{minted}
+
+\newParagraph
+Although using server requests can hold down the performance of the system on large traffic, we use it extensively because handling and validating
+the inputs, role of user and other security issues can be done in a more powerful way faster with server calls, that could be improved later, but
+with the current usage of the system it doesn't affect the performance too much.
+
+\newParagraph
+Publications are usually sending all data in our case, however some publications needs limiting the sent data, or projecting on some fields
+to be sent back, for example, the user data publication is projecting on public fields only except for admin users, to prevent users from
+accessing sensitive data of other users. The questions and answers publication is also different, we use the composite publication option
+provided by englue~\cite{meteor_composite_publish} to allow publication of the current question data only in a reactive way,
+that is because loading all comments, answers, votes and all data related to all questions and answers on the system would cause always
+a performance problem even with low traffic.
+
+\begin{minted}{js}
+  Meteor.publishComposite('questionData', function(questionSlug) {
+  return {
+    find() {
+      return Questions.find({ slug: questionSlug });
+
+    },
+    children: [
+      {
+        find(question) {
+          let commentIds = question.comments || [];
+          return Comments.find({ _id: { $in: commentIds } });
+        }
+      },
+      {
+        find(question) {
+          let answerIds = question.answers || [];
+          return Answers.find({ _id: { $in: answerIds } });
+        },
+        children: [
+          {
+            find(answer) {
+              let commentIds = answer.comments || [];
+              return Comments.find({ _id: { $in: commentIds } });
+            },
+          }
+        ],
+      }
+    ],
+  }
+});
+\end{minted}
+
+\newParagraph
+Server side computation is done also for search index, we have a search index in admin view for user management, and another one
+for searching the question, providing the search index on the client requires that all the data is loaded in minimongo which can limit the performance,
+so we just load a partial set of data and request more data in a paginated design, however if the user decided to search, the search index runs on the
+server, thus having access to the whole dataset for queries.
