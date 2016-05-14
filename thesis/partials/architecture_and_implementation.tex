@@ -12,7 +12,7 @@ this is due to the current state of \ac{js} community where one can find a well 
 \newParagraph
 We started to do a quick tests and comparisons between Express.js, Hapi.js, Sails.js and meteor.js; the main goal was to have a stable
 and functional system in the shortest period possible, that was required because \ac{sems} was planned to be used in the same year, forcing
-us to have a production-ready application within 2 weeks of the project start.
+us to have a production-ready application within two weeks of the project beginning.
 
 \newParagraph
 With that in mind, we chose meteor.js as our main framework, supported with blaze templating engine for the views, and mongoDB as the
@@ -21,14 +21,19 @@ to be ready for production releases.
 
 \section{Deployment}
 \label{sec:deployment}
-We had tested 2 deployment techniques during the implementation of the project, the main goal was to have smooth deployments frequently with
+We had tested two deployment techniques during the implementation of the project, the main goal was to have smooth deployments frequently with
 the new features, while maintaining the stability of the system with minimum downtime and quick recovery in case of crashes or bugs.
 
 \newParagraph
 First trail was to have a docker container hosting our meteor application on the server, the deployment was easy to be done with a tool
 called mupx~\cite{mupx}, However, having a docker container with meteor application was not the best choice for us to recover from downtimes,
-that is beacuse we are dealing with local storage on our server as we do not use any external storage server, making it hard to migrate between
+that is because we were dealing with local storage on our server as we do not use any external storage server, making it hard to migrate between
 different deployments while preserving our local filesystem without problems.
+
+\newParagraph
+The deployment finally was done using Meteor's build tool, that allows bundling the application and producing an application that is ready
+to run in a NodeJS environment, this allowed us to easily build and deploy our application quickly, specially when hotfixes are applied,
+and also it helped us to recover from problems that can affect our server filesystem by easily backing up the directories and files frequently.
 
 \section{Analytics}
 \label{sec:analytics}
@@ -37,10 +42,6 @@ different deployments while preserving our local filesystem without problems.
 integrated in the system, allowing tracking page views, feature usage and custom events, this improved the evaluation of changes applied on the
 system by measuring user interaction and involvement with new features.
 
-\newParagraph
-The deployment finally was done using Meteor's build tool, that allows bundling the application and producing an application that is ready
-to run in a NodeJS environment, this allowed us to easily build and deploy our application quickly, specially when hotfixes are applied,
-and also it helped us to recover from problems that can affect our server filesystem by easily backing up the directories and files frequently.
 
 \section{Student Interaction}
 \label{sec:student-interaction}
@@ -136,9 +137,10 @@ mobile application to be displayed on their team page, that allows teams to shar
 
 \subsection{Administrator Panel}
 \label{sub:admin-panel}
-Administrators can access and modify everything on the system, this is done through the administration panel, whenever an admin logs in
+Administrators can access and modify everything on the system, this is done through the administration panel, whenever an administrator logs in
 a new item is available in the navigation bar for the admin panel shown in figure \ref{fig:sems-admin-panel}
 \includefig{0.75}{sems-admin-panel.png}{\ac{sems} Admin Panel}{fig:sems-admin-panel}
+
 \newParagraph
 The admin panel have some options that allows the administrator to modify different sections of the system, we are going
 to navigate through 2 options which are the user management and announcement management, as the schedule edit is a shortcut to modify
@@ -178,12 +180,12 @@ Also, an announcement could be restricted from global to specific teams and vice
 \newParagraph
 Whenever an announcement is made, a notification is sent throughout \ac{sems} notification system to all students who are in the target
 of the announcement, so, if the announcement is global, a notification would be sent to all members of all teams, and if the announcement
-was restricted to some teams, the notification would appear to all members of the targeted teams only, notifications are more explained in
+was restricted to some teams, the notification would appear to all members of the targeted teams only, notification system is explained further in
 \ref{sub:notifications}.
 
 \subsection{Announcements}
 \label{sub:announcements}
-As mentioned before, the instructors can publish announcements to different teams, the announcements and milestones are accessible through the
+As mentioned before, the instructors can send announcements to different teams, the announcements and milestones are accessible through the
 team page, announcements are displayed as a stack of non-expandable information, with the date of the announcement. Milestones on the other hand are
 displayed as a separate cards holding a short preview of the milestone, and is expandable as shown in \ref{fig:sems-milestone-display} to view
 the whole milestone details, this is because milestones are usually longer than announcements, and usually they contain code snippets and sometimes
@@ -194,10 +196,10 @@ images.
 
 \subsection{Discussions}
 \label{sub:discussions}
-The discussions module aim is to reduce the time taken to reach other students or staff when a user seek help, or when he/she needs
-clarification about some part in the course, the discussion section is consisting of questions, answers and comments. Mimicking the
-design of question and answers services, the discussions section is simple enough, with support to markdown, code highlighting, voting, tags and
-best answers marking, it provides some useful tools to ask a question easily. The discussion module briefly consists of the following components :
+The discussions module aim is to reduce the time taken to reach other students or staff when a user seek help or when he/she needs
+clarification about some part in the course. The discussions section is consisting of questions, answers and comments. Mimicking the
+design of question and answers services. The discussions section is simple enough, yet powerful with support to markdown, code highlighting, voting, tags and
+best answers marking, it provides some useful tools to ask a question easily. The discussions module briefly consists of the following components :
 
 \subsubsection{Question Browser}
 \label{subs:question-browser}
