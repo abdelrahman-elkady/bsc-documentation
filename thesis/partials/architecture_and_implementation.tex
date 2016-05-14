@@ -1,7 +1,7 @@
 \chapter{Architecture and Implementation}
 \label{chap:architecture_and_implementation}
 
-In this chapter we have the implementation and the architecture of \ac{sems}, showing the main system modules, design decisions,
+In this chapter we have the implementation and the architecture of \ac{sems}, showing the main system modules,
 problems and impediments and their solutions and the design approaches taken during the implementation of \ac{sems}.
 
 \section{Framework Selection}
@@ -10,12 +10,12 @@ Before starting the implementation of the project, we examined some frameworks, 
 this is due to the current state of \ac{js} community where one can find a well structured and maintained projects and modules.
 
 \newParagraph
-We started to do a quick tests and comparisons between Express.js, Hapi.js, Sails.js and meteor.js; the main goal was to have a stable
+We started to test and compare between different frameworks, the comparison was made between Express.js, Hapi.js, Sails.js and meteor.js; the main goal was to have a stable
 and functional system in the shortest period possible, that was required because \ac{sems} was planned to be used in the same year, forcing
 us to have a production-ready application within two weeks of the project beginning.
 
 \newParagraph
-With that in mind, we chose meteor.js as our main framework, supported with blaze templating engine for the views, and mongoDB as the
+With that in mind, we chose meteor.js as our main framework, supported with blaze templating engine for the views and mongoDB as the
 database system, allowing us to push forward and focus on system design quickly while maintaining a stable application and framework
 to be ready for production releases.
 
@@ -31,8 +31,8 @@ that is because we were dealing with local storage on our server as we do not us
 different deployments while preserving our local filesystem without problems.
 
 \newParagraph
-The deployment finally was done using Meteor's build tool, that allows bundling the application and producing an application that is ready
-to run in a NodeJS environment, this allowed us to easily build and deploy our application quickly, specially when hotfixes are applied,
+The deployment finally was done using Meteor's build tool, that allows bundling the application and produces bundle that can run
+in a normal NodeJS environment, this allowed us to easily build and deploy our application quickly, specially when hotfixes are applied,
 and also it helped us to recover from problems that can affect our server filesystem by easily backing up the directories and files frequently.
 
 \section{Analytics}
@@ -234,7 +234,7 @@ script as there is no user interface developed for it yet.
 
 \subsection{Hall Of Fame}
 \label{sub:hall-of-fame}
-The hall of fame holds the winning teams of previous years, this module is done to keep track of winning teams, show appreciation and to
+The hall of fame holds the winning teams of previous years, this module is implemented to keep track of winning teams, show appreciation and to
 be incentive and motivational for current students to win the competition of the year.
 
 \subsection{Notifications}
