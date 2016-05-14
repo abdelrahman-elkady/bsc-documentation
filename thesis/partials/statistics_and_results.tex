@@ -32,3 +32,55 @@ asked them if it was motivating or demotivating to see other teams deployments, 
 of students found it incentive to see other teams deployments.
 \includefig{0.85}{sems-deployments.png}{Users launching deployments after opening team browser}{fig:sems-deployments}
 \includefig{0.85}{sems-deployments-survey.png}{Users feedback on sharing deployments on team view}{fig:sems-deployments-survey}
+
+\subsection{Discussions Section}
+\label{sub:discussions-stats}
+\includefig{0.85}{sems-discussions-graph.png}{Views of discussions section}{fig:sems-discussions-graph}
+With the graph shown in \ref{fig:sems-discussions-graph} it is clear that the discussion section attracted many people at the beginning,
+however users started to abandon the discussions section as they started to use slack more for questions.
+
+\newParagraph
+Although Slack\texttrademark{} integration was notifying about new questions, the bot itself was tested on production by the end
+of the course, which can reduce the accuracy of its effect on student involvement in question section. Students feedback on this
+section is interesting, as in \ref{fig:sems-discussions-feedback} more than 50\% of students said that the discussions was more
+effective than using the email and trying to reach the instructors on campus for example, however more than 65\% of students said
+that they never tried to use the discussions for posting questions.
+\includefig{0.85}{sems-discussions-feedback.png}{Feedback on discussions section}{fig:sems-discussions-feedback}
+
+\newParagraph
+We assume that users needs more motivation to use the discussions section, the Slack\texttrademark{} integration should be tested to see its
+effect on interaction with the system, also a reputation and points system could be incentive for students to help each other on the discussions
+section.
+
+\subsection{User Profiles}
+\label{sub:user-profiles-stats}
+\includefig{0.85}{sems-profile-views.png}{User profile views}{fig:sems-profile-views}
+The total views of the user public profile shown in \ref{fig:sems-profile-views} shows that the users actually have found it interesting to have
+some kind of social interaction, by displaying profiles and linking the user with his actions around the website it seems that users are
+interacting with profile links, however, due to the low usage of discussions section discussed in the previous section, the user interaction
+could be highly affected, the discussion form could greatly affect the users social interaction, that it is a good idea to re-measure the user
+interaction whenever the status of discussions section is changed.
+
+\subsection{Announcements Delivery}
+\label{sub:announcements-delivery-stats}
+\includefig{0.85}{sems-announcements-stats.png}{Announcements Feedback}{fig:sems-announcements-stats}
+Tracking the announcements delivery is important on the system, the users feedback shown in \ref{fig:sems-announcements-stats} shows that the usage
+of markdown and code highlighting was liked by many users, also users are satisfied with the delivery of the announcements on the system. That shows
+that people are actually interested in having some kind of notifications on announcements, and the look of plain announcements could be boring for
+a lot of people and can not provide enough flexibility for content delivery.
+
+\includefig{0.85}{sems-slack-stats.png}{Users Feedback about Slack Integration}{fig:sems-slack-stats}
+
+\newParagraph
+In figure \ref{fig:sems-slack-stats} the users are asked about their experience with Slack\texttrademark{} Integration, as expected
+many users are happy with Slack\texttrademark{} integration, this supports the previous point that users likes to be notified
+without having to check the system everytime for new updates. Interestingly about 25\% are not happy with the integration, this could
+be happening because of some problems with the current implementation of the bot that causes a spammy behavior, as the bot posts
+about any update of announcements which causes an instructor editing his announcements but not in final stage to send the notification
+multiple times, this could be fixed by providing a \quotes{preview edits} functionality for instructors.
+
+\subsection{Overall Feedback}
+\label{sub:overall-feedback}
+Overall feedback from students shows that the majority of students would like to use this system instead of the \ac{met} portal, that
+can show that the development of new systems and/or updating the current course management systems could improve the students satisfaction.
+\includefig{0.85}{sems-overall-rating.png}{Overall system feedback}{fig:sems-overall-rating}
