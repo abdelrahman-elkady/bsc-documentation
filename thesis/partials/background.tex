@@ -1,9 +1,9 @@
 \chapter{Background}
 \label{chap:background}
 
-As mentioned before, we are addressing the management of the \ac{se} course, this chapter explains
-important definitions and technologies used in the course flow and the system design, in order to understand
-the system architecture and implementation which are introduced in the next chapters.
+This chapter explains important definitions and technologies used in the course and system design. Knowledge of those definitions
+is required to understand the system architecture and implementation which are introduced in the \ref{chap:architecture_and_implementation}
+\textsuperscript{rd} Chapter.
 
 \section{Definitions}
 \label{sec:definitions}
@@ -11,33 +11,31 @@ the system architecture and implementation which are introduced in the next chap
 \subsection{Scrum}
 \label{sub:scrum-process}
 
-Scrum is a methodology and technique for software management and development, introduced in 1995 by Ken Schwaber,
-as an extension and enhancement over the normal iterative development model~\cite{Schwaber1997}, the process
+Scrum is a methodology and technique for software management and development. Introduced in 1995 by Ken Schwaber
+as an extension and enhancement over the normal iterative development model~\cite{Schwaber1997}. The process
 provides a lot of flexibility to handle complex system development taking into consideration possible requirement
-changes and the effect of changes on software, allowing teams to scale and develop solid software in a more flexible
+changes and the effect of changes on software. Scrum allows teams to scale and develop solid software in a more flexible and efficient
 environment.~\cite{Schwaber1997}
 
 \newParagraph
-The Scrum process contains the following definitions, those definitions have more detailed description and contains even
-more definitions and points in there, but here we are only focusing on the main definitions of the Scrum process
+The Scrum process contains the following definitions, those definitions have more detailed description and even contain
+sub-definitions and points. But here we are only focusing on the main definitions of the Scrum process that are required for project understanding.
 \begin{itemize}
-  \item Scrum Master : The Scrum master is the lead of the development team, as described in the process his job
-  is to minimize conflicts between the team and the product owner, hold the retrospective meeting and track
+  \item Scrum Master : The Scrum master is the lead of the development team. As described in the Scrum model his job
+  is to minimize conflicts between the team and the product owner, hold the retrospective meetings and track
   the progress of the team.~\cite{schwaber_2004}
-  \item Product Owner : The project holder, he have the original description of the product and ensure that the
+  \item Product Owner : The project holder, he have the original description of the product and ensures that the
   progress made is adhering the specifications.~\cite{schwaber_2004}
 \end{itemize}
 
 \newParagraph
-More Scrum components are the development team itself and the documentation and specifications represented into the backlog~\cite{schwaber_2004}.
-The course follows the scrum process, requiring each team to be formed by the scrum master, documenting their backlog and hold their meetings, the
-technologies used for that is discussed in the next section.
+More Scrum components are the development team itself, the documentation and specifications represented into the backlog~\cite{schwaber_2004}.
+The course follows the scrum process, requiring each team to be formed by the scrum master, documenting their backlog and hold their meetings.
 
 \subsection{Learning Management System}
 \label{sub:lms}
-
 A \ac{lms} is a platform that provides administrative services to the content providers and allows delivering, tracking and
-documenting the supplied educational content, and track the progress and data of enrolled users of the system~\cite{lms_1}
+documenting the supplied educational content. A \ac{LMS} also tracks the progress and data of enrolled users of the system~\cite{lms_1}
 
 
 \section{Technologies and Services}
@@ -46,68 +44,67 @@ documenting the supplied educational content, and track the progress and data of
 \subsection{Trello\texttrademark{}}
 \label{sub:trello}
 Trello\texttrademark{} is a simple project management and team collaboration application, launched in 2011\cite{rao_2011}. It attracted a lot
-of people because of its simple task orientation as cards and lists, it have been used to manage the scrum process by maintaining the backlog
-and distribute the tasks on different lanes~\cite{trello_scrum}\cite{trello_scrum_2}, the backlog and task management is already handled
-on Trello\texttrademark{} in this course.
+of people because of its simple task orientation represented as cards and lists. It had been used to manage the scrum process by maintaining the backlog
+and distribute the tasks on different lanes~\cite{trello_scrum}\cite{trello_scrum_2}. The backlog and task management in the scrum
+model is managed through Trello\texttrademark{} in this course.
 
 \subsection{Slack\texttrademark{}}
 \label{sub:slack}
 Slack\texttrademark{} is a team based, cloud hosted messaging application founded in 2013 by Stewart Butterfield, Eric Costello, Cal Henderson
-and Serguei Mourachov~\cite{kumparak_2015}. Slack\texttrademark{} is effectively used in teams that follows the agile methodology.
+and Serguei Mourachov~\cite{kumparak_2015}. Slack\texttrademark{} is effectively used in teams that follows the agile methodology.~\cite{claps_2015}\cite{davies_2016}
 
 \newParagraph
-Moreover, Slack can be used in teaching to allow students to have more freedom and participation in the course discussions, this is a
-great environment too for remote education as it allows reaching the instructors easily,~\cite{medium_slack_2015}\cite{slack_education} in the current
-version of the course, the students are invited to join a general Slack\texttrademark team for the course to get connected to
-other students and instructors.
+Moreover, Slack can be used in teaching to allow students to have more freedom and participation in the course discussions. This is a
+great environment too for remote education as it allows easier connection with instructors.~\cite{medium_slack_2015}\cite{slack_education} In the current
+version of the course, the students are invited to join a general Slack\texttrademark{} team to get connected to other students and instructors.
 
 \subsection{JSON}
 \label{sub:json}
-\ac{json} is a simple data interchange format, which is the standard \ac{js}, it is designed to be easily handled by both humans and machines.
-\ac{json} is used widely these days as a data format that most of current languages can decode and encode easily, given that it is the default
+\ac{json} is a simple data interchange format. It is designed to be easily read and parsed by both humans and machines.
+\ac{json} is used widely now as a data format that most of available languages can decode and encode easily. Given that it is the default
 object notation in \ac{js}, it is very common to be used within \ac{js} powered applications.~\cite{json}
 
 
 \subsection{BSON}
 \label{sub:bson}
-\ac{bson} is a binary data format that is \ac{json}-like, lightweight data interchange format. It uses almost the same grammar as \ac{json}, but it
+\ac{bson} is a binary data format that is \ac{json}-like. It uses almost the same grammar as \ac{json}, but it
 is encoded into binary, making it more efficient to be stored, manipulated and parsed.~\cite{bson}
 
 \subsection{MongoDB\texttrademark{}}
 \label{sub:mongodb}
-MongoDB\texttrademark{} is a NoSQL, document based, open-source database. MongoDB\texttrademark{} became popular and is used in
+MongoDB\texttrademark{} is a NoSQL, document based, open-source database system. MongoDB\texttrademark{} became popular and is used in
 scalable production applications heavily~\cite{dbs_rank}. MongoDB\texttrademark{} uses \ac{bson} for its document entires, making
-it easy to deal with the data in a more modular way that reflects real life data.
+it easy to deal with the data in a more modular way that reflects real life modeling.
 
 \subsection{MixPanel\texttrademark{}}
 \label{sub:mixpanel}
-MixPanel\texttrademark{} is an analytical service that provides a powerful analytical tools for both mobile and web technologies.~\cite{mixpanel}
+MixPanel\texttrademark{} is an analytical service that provides a powerful analytic tools for both mobile and web technologies.~\cite{mixpanel}
 MixPanel\texttrademark{} provides normal tracking tools to measure events and page visits, and it also provides different analytical
 techniques to allow modeling and retrieving information from the data, including tools like funnels and A/B testing.~\cite{mixpanel}
 
 \subsection{SendGrid\texttrademark{}}
 \label{sub:sendgrid}
 SendGrid\texttrademark{} is an email service provider, providing cloud structured email delivery system. SendGrid\texttrademark{} provides
-an API allowing different applications to interact with the system and send emails, it also allows white-listing the email status and configuring
-the \ac{dns} for the client to send emails from his own domain.~\cite{sendgrid}
+an API allowing different applications to interact with the system and send emails. It also allows white-listing of email domains and configuration of
+\ac{dns} to allow clients to send emails from their own domain.~\cite{sendgrid}
 
 \subsection{NodeJS}
 \label{sub:node}
-NodeJS is a serverside runtime environment implemented on Google's V8 \ac{js} runtime engine, allowing \ac{js} features to be ran
-on server-side of web applications.~\cite{nodejs}
+NodeJS is a server-side runtime environment implemented on Google's V8 \ac{js} runtime engine, allowing \ac{js} features to be ran
+on the server-side of web applications.~\cite{nodejs}
 
 \subsection{MeteorJS}
 \label{sub:meteor}
 Meteor is a \ac{js} open-source framework that was founded in 2012~\cite{meteor_launch}.
-Meteor focuses on building modern web applications within a narrow time-frame, with the ability to create prototypes quickly, exporting to mobile
-and web applications from the same codebase and to build and run the application as a normal NodeJS application that can be hosted in a normal
-NodeJS environment.
+Meteor focuses on building modern web applications within a narrow time-frame. With its ability to create prototypes quickly, exporting to mobile
+and web applications from the same codebase and building and running the application as a normal NodeJS application that can be hosted in a normal
+NodeJS environment, it became popular among \ac{js} frameworks.
 
 \subsection{Semantic UI}
 \label{sub:semantic_ui}
-Semantic UI is a front-end framework, it includes a pre-compiled \ac{css} and \ac{js} files that builds a set of reusable components
-for web. The main feature behind Semantic UI project is to have an intuitive and human readable components, allowing
-the developer to have a smooth experience while building the views of his application.~\cite{semantic_ui}
+Semantic UI is a front-end framework. It includes a pre-compiled \ac{css} and \ac{js} files that formulates a set of reusable components
+for web and mobile design. The main philosophy behind Semantic UI project is to have an intuitive and human readable components, allowing
+the developer to have a more natural experience while building the views of his application.~\cite{semantic_ui}
 
 \section{Previous Work}
 \label{sec:previous-work}
