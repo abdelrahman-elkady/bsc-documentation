@@ -171,19 +171,19 @@ teams.
 \includefig{0.75}{sems-admin-announcement.png}{Admin Announcement Panel}{fig:sems-admin-announcement}
 
 \newParagraph
-The announcements can be deleted or edited anytime from the admin panel, the editing will affect all the teams who have access to this announcement,
+The announcements can be deleted or edited anytime from the admin panel. The Edit will affect all the teams who have access to this announcement.
 Also, an announcement could be restricted from global to specific teams and vice-versa.
 
 \newParagraph
 Whenever an announcement is made, a notification is sent throughout \ac{sems} notification system to all students who are in the target
-of the announcement, so, if the announcement is global, a notification would be sent to all members of all teams, and if the announcement
+of the announcement. So, if the announcement is global, a notification would be sent to all members of all teams. And if the announcement
 was restricted to some teams, the notification would appear to all members of the targeted teams only, notification system is explained further in
 \ref{sub:notifications}.
 
 \subsection{Announcements}
 \label{sub:announcements}
-As mentioned before, the instructors can send announcements to different teams, the announcements and milestones are accessible through the
-team page, announcements are displayed as a stack of non-expandable information, with the date of the announcement. Milestones on the other hand are
+Announcements and milestones are accessible through the team page. Announcements are displayed as a stack of non-expandable information,
+with the date of the announcement displayed beside each one. Milestones on the other hand are
 displayed as a separate cards holding a short preview of the milestone, and is expandable as shown in \ref{fig:sems-milestone-display} to view
 the whole milestone details, this is because milestones are usually longer than announcements, and usually they contain code snippets and sometimes
 images.
@@ -193,10 +193,10 @@ images.
 
 \subsection{Discussions}
 \label{sub:discussions}
-The discussions module aim is to reduce the time taken to reach other students or staff when a user seek help or when he/she needs
+The discussions module aims to reduce the time taken to reach other students or staff when a user seek help or when he/she needs
 clarification about some part in the course. The discussions section is consisting of questions, answers and comments. Mimicking the
-design of question and answers services. The discussions section is simple enough, yet powerful with support to markdown, code highlighting, voting, tags and
-best answers marking, it provides some useful tools to ask a question easily. The discussions module briefly consists of the following components :
+design of question and answers services. The discussions section is simple enough, yet powerful with support of markdown, code highlighting, voting, tags and
+best answers marking. That provides a useful set of tools to ask a question easily. The discussions module briefly consists of the following components :
 
 \subsubsection{Question Browser}
 \label{subs:question-browser}
@@ -205,7 +205,7 @@ downvote questions and check the view and answer count for each question.
 \includefig{0.75}{sems-discussions-main.png}{Question Browser}{fig:sems-discussions-main}
 
 \newParagraph
-To improve the performance of question navigation and search, the search index is manipulated on the server, allowing the client to subscribe to
+To improve the performance of question navigation and search, the search index is exists on the server, allowing the client to subscribe to
 the documents in an efficient way by subscribing to the documents on the current page only, and request more whenever the user chooses another page.
 
 \subsubsection{Question Creation}
@@ -218,25 +218,25 @@ write his question with markdown support and apply tags, the help icon displays 
 \label{subs:question-details}
 When a user click on a question, the full question content is displayed, allowing the user to read the question, down or upvote it, add his comments
 on the question and provide an answer. From this page also, the owner of the question can mark one of the answers as the accepted answer, this
-will show the marked answer on top for everyone who visit this thread later.
+will show the marked answer on top for anyone else who visit the same thread later.
 \includefig{0.75}{sems-question-details.png}{Question Details View}{fig:sems-question-details}
 
 
 \subsection{Gradebook}
 \label{sub:gradebook}
-To provide students with feedback on their performance, a gradebook module is implemented to be embedded in the team view. Each
+To provide students with feedback on their performance, gradebook module is implemented to be embedded in the team view. Each
 user can see a detailed schema of his team grades, and receive his individual grade. The grades are still inserted through a backend
 script as there is no user interface developed for it yet.
 \includefig{0.75}{sems-grades.png}{Gradebook}{fig:sems-grades}
 
 \subsection{Hall Of Fame}
 \label{sub:hall-of-fame}
-The hall of fame holds the winning teams of previous years, this module is implemented to keep track of winning teams, show appreciation and to
-be incentive and motivational for current students to win the competition of the year.
+The hall of fame displays the winning teams of previous years, this module is implemented to keep track and show appreciation to winning
+teams, and to be incentive and motivational for current students to win the competition of the year.
 
 \subsection{Notifications}
 \label{sub:notifications}
-The notification system is implemented to keep the users updated with changes on the system, the notification module is
+The notification system is implemented to keep the users updated with changes on the system. Notification module is
 simply a document in the database holding the textual content, an optional link to the event, a reference to the user who will receive this
 notification and a flag indicating if the notification is read by this user. With the current schema and the reactiveness of meteor,
 any notification can be sent easily with simple insertion, for example this is a notification sent to the question owner
@@ -253,10 +253,10 @@ Notifications.insert({
 \end{minted}
 
 \newParagraph
-Where icon and content are \ac{js} variables, as content supports html rendering, font icons could be passed
-for notifications. Unread notification count is displayed on the user's navigation bar, with quick preview of latest notifications dropdown,
-by clicking on \quotes{see all} button, the user is directed to a full history of his notifications as shown in \ref{fig:sems-notifications-history}
-and options to clear his history and mark all of his notifications as read.
+Where \quotes{icon} and \quotes{content} are \ac{js} variables. As content supports html rendering, font icons could be passed
+for notifications. Unread notification count is displayed on the user's navigation bar, with quick preview of latest notifications dropdown.
+By clicking on \quotes{see all} button, the user is directed to a full history of his notifications as shown in figure \ref{fig:sems-notifications-history}
+and options to clear his history or mark all of his notifications as read is accessiable from the history page.
 \includefig{0.75}{sems-notifications.png}{Notifications}{fig:sems-notifications}
 \includefig{0.75}{sems-notifications-history.png}{Notifications History}{fig:sems-notifications-history}
 

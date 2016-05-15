@@ -1,2 +1,43 @@
 \chapter{Conclusion and Future Work}
 \label{chap:conclusion}
+In this thesis, we explained problems encountered in previous versions of the \ac{se} course. We proposed a new management
+system that aims to solve those problems. The system is implemented and tested within the current version of \ac{se} course. We
+also displayed analytic results and discussed students feedback. Based on students feedback the system enhanced the announcement delivery for
+students. Also, the data collected throughout user registration and team creation helped the course staff with their progress tracking and
+course management. The schedule now solves the problem of re-uploading the materials by giving the instructor the flexibility to upload material or
+link to external sources. The archiving of questions and staff contact through the discussions section needs more involvement to be tested,
+but it is noticed that Slack\texttrademark{} did solve that problem too, thus more research and testing could be conducted
+on the connection between the system and Slack\texttrademark{}.
+
+\subsection{Future Recommendations}
+\label{sub:future-work}
+This project could be enhanced for further usage in the \ac{se} course. Also this system could be extended for another courses,
+As shown in the previous chapter, students expressed that they agree to try this system again for other team oriented courses. Some
+suggestions for future work is mentioned below.
+
+\begin{itemize}
+  \item Project Restructure : This project was initialized with Meteor 1.2.1, during the development of the system, another major release
+  \quotes{1.3} is published by Meteor Development Group. The new release recommends a new project structure that would be adopted later in all
+  Meteor projects to ensure scalability and modularity.~\cite{meteor_1_3_structure} Restructuring the project and refactoring the codebase would
+  support the maintainability and scalability of this system in the future.
+  \item Optimization for publication/subscription model : The system needs more optimized publication and subscription model to fetch documents
+  from the database onto the client, the current implementation sometimes fetches more data than needed which could cause
+  performance problems on larger scale.
+  \item Implementing User Interface for instructors to manage grades: Currently the data for the grades is inserted in the database directly with
+  server-side scripts. Implementing a user interface to allow the instructor to insert grades would enhance the experience of grade insertion and
+  modifications.
+  \item Effective handling of user roles : The current implementation assumes that the user role(s) is consistent through all modules of the system.
+  While this could be sufficient for now, this could complicate role management if the system started to support different course versions or even different
+  courses.
+  \item Enhance the notification system : The current notification system does not remove notifications of deleted events. Also, repeated
+  events would send repeated notification like up and downvoting the same question multiple times. A better event handling could be implemented
+  to avoid duplicate and non valid notifications.
+  \item Implement live preview for markdown supported fields : Markdown support in questions, answers, announcements and notifications could support
+  live preview. This would enhance the user experience with editing these fields. Also, this would enhance the Slack\texttrademark{} integration experience,
+  by having it send only one notification when an update is actually applied to an announcement, not multiple styling updates.
+  \item Highlight the updated sections in announcements : Whenever an announcement is edited and updated by the instructor, an option to highlight the changes
+  could be implemented, in order to make it easier for students to figure out what changes was applied in the last update.
+  \item Support Email Notifications : Users could be provided with options to specify events that they wish to receive Email notifications on.
+  \item Implement a reputation system : A reputation system could enhance the experience of the system, motivate students to use the discussions section and help
+  each other and enhance the social interaction on the system.
+\end{itemize}
