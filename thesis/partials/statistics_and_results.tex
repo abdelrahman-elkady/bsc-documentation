@@ -1,86 +1,88 @@
 \chapter{Statistics and Results}
 \label{chap:statistics}
 
-In this chapter, we show information and data collected from MixPanel\texttrademark{} analytics and from system users feedback, this data shows
-overall system satisfaction, user retention, different service rating, effect of updating some services and/or introducing new services on the system.
+In this chapter, we show information and data collected from MixPanel\texttrademark{} analytics and system users feedback. This data shows
+overall system satisfaction, user retention, different service rating and the effect of updating some services and/or introducing new services on the system.
 
-\subsection{User Retention}
-\label{sub:user-retention}
+\section{User Retention}
+\label{sec:user-retention}
 \includefig{0.85}{sems-retention.png}{\ac{sems} User Retention}{fig:sems-retention}
 
-MixPanel\texttrademark{} shows the retention data, the columns shows the returned users in n weeks, it shows that after having a fair stable version
-the user retention is increased, it kept stable though with a small difference starting from Mar 28\textsuperscript{th}, this is a bit applicable, given
-that users usually comeback when the system have new updates, or when a new announcement or milestone is published, as will be shown in next sections.
+Figure \ref{fig:sems-retention} shows MixPanel\texttrademark{}'s retention data. The columns shows the returned users in n weeks.
+It shows that after having a fairly stable version the user retention is increased. It kept stable with a small difference starting
+from Mar 28\textsuperscript{th}. This is a bit applicable, given that users usually come back when the system have new updates, or when a
+new announcement or milestone is published, as will be shown in next sections.
 
-\subsection{Page Visits}
-\label{sub:page-visits}
+\section{Page Visits}
+\label{sec:page-visits}
 \includefig{0.85}{sems-general-graph.png}{\ac{sems} Generic page views}{fig:sems-general-graphs}
-Generic page visits graphs can show the interest and the traffic spikes throughout the duration of the course, figure \ref{fig:sems-general-graphs}
-shows a sample of 3 frequently visited pages on the system and their visit rate throughout the course, in blue is the home page,
-cyan is the team view for members and in purple the team browser, this graphs shows that users are normally having a stable rate of visit, with some
-spikes on new feature releases, or when a new announcement is published, in \ref{fig:sems-general-graphs}, the spikes on 29\textsuperscript{th} of March and
-12\textsuperscript{th} of April were a new milestone announcement for example, while the spike on the 29\textsuperscript{th} of February was the first
+Generic page visits graphs can show the interest and the traffic spikes throughout the duration of the course. Figure \ref{fig:sems-general-graphs}
+shows a sample of 3 frequently visited pages on the system and their visit rate throughout the course. In blue is the home page,
+cyan is the team view for members and in purple the team browser. This graph shows that users are normally having a stable rate of visit, with some
+spikes on new feature releases, or when a new announcement is published. In \ref{fig:sems-general-graphs}, the spikes on 29\textsuperscript{th} of March and
+12\textsuperscript{th} of April were a new milestone announcement for example. While the spike on the 29\textsuperscript{th} of February was the first
 introduction of user registration after a static website stage.
 
-\subsection{Viewing Deployments}
-\label{sub:deployments-views}
+\section{Viewing Deployments}
+\label{sec:deployments-views}
 To measure if allowing teams to share their deployed application with other teams attracted students to see others work or not, we created
 a funnel on MixPanel\texttrademark{} that measures the number of students that browses the teams and launches the deployments of other teams during
-one month, the results showed that about 60\% of users visiting team browser launches at least one deployment as the first action after visiting the
+one month. The results showed that about 60\% of users visiting team browser launches at least one deployment as the first action after visiting the
 page as shown in \ref{fig:sems-deployments}. Also we provided a feedback form, where 168 student sent their feedback about the system, we
 asked them if it was motivating or demotivating to see other teams deployments, the graph in \ref{fig:sems-deployments-survey} shows that around 70\%
 of students found it incentive to see other teams deployments.
 \includefig{0.85}{sems-deployments.png}{Users launching deployments after opening team browser}{fig:sems-deployments}
 \includefig{0.85}{sems-deployments-survey.png}{Users feedback on sharing deployments on team view}{fig:sems-deployments-survey}
 
-\subsection{Discussions Section}
-\label{sub:discussions-stats}
+\section{Discussions Section}
+\label{sec:discussions-stats}
 \includefig{0.85}{sems-discussions-graph.png}{Views of discussions section}{fig:sems-discussions-graph}
-With the graph shown in \ref{fig:sems-discussions-graph} it is clear that the discussion section attracted many people at the beginning,
-however users started to abandon the discussions section as they started to use slack more for questions.
+With the graph shown in \ref{fig:sems-discussions-graph} it is clear that the discussion section attracted many people at the beginning.
+However users started to abandon the discussions section in favor of using Slack\texttrademark{} for questions.
 
 \newParagraph
 Although Slack\texttrademark{} integration was notifying about new questions, the bot itself was tested on production by the end
-of the course, which can reduce the accuracy of its effect on student involvement in question section. Students feedback on this
+of the course. Which can reduce the accuracy of its effect on student involvement in question section. Students feedback on this
 section is interesting, as in \ref{fig:sems-discussions-feedback} more than 50\% of students said that the discussions was more
-effective than using the email and trying to reach the instructors on campus for example, however more than 65\% of students said
+effective than using the email and trying to reach the instructors on campus. However more than 65\% of students said
 that they never tried to use the discussions for posting questions.
 \includefig{0.85}{sems-discussions-feedback.png}{Feedback on discussions section}{fig:sems-discussions-feedback}
 
 \newParagraph
-We assume that users needs more motivation to use the discussions section, the Slack\texttrademark{} integration should be tested to see its
-effect on interaction with the system, also a reputation and points system could be incentive for students to help each other on the discussions
-section.
+We assume that users needs more motivation to use the discussions section. The Slack\texttrademark{} integration should be tested to see its
+effect on user interaction with the discussions section. Also a reputation and points system could be incentive for students to help each other
+on the discussions section.
 
-\subsection{User Profiles}
-\label{sub:user-profiles-stats}
+\section{User Profiles}
+\label{sec:user-profiles-stats}
 \includefig{0.85}{sems-profile-views.png}{User profile views}{fig:sems-profile-views}
-The total views of the user public profile shown in \ref{fig:sems-profile-views} shows that the users actually have found it interesting to have
-some kind of social interaction, by displaying profiles and linking the user with his actions around the website it seems that users are
-interacting with profile links, however, due to the low usage of discussions section discussed in the previous section, the user interaction
-could be highly affected, the discussion form could greatly affect the users social interaction, that it is a good idea to re-measure the user
+The average views of the user public profile shown in \ref{fig:sems-profile-views} shows that the users actually have found it interesting to have
+some kind of social interaction. By displaying profiles and linking the user with his/her actions around the website it seems that users are
+interacting with profile links. However, due to the low usage of discussions section discussed in the previous section, the user interaction
+could be highly affected. The discussions section could greatly affect the users social interaction. So, it is needed to re-measure the user
 interaction whenever the status of discussions section is changed.
 
-\subsection{Announcements Delivery}
-\label{sub:announcements-delivery-stats}
+\section{Announcements Delivery}
+\label{sec:announcements-delivery-stats}
 \includefig{0.85}{sems-announcements-stats.png}{Announcements Feedback}{fig:sems-announcements-stats}
-Tracking the announcements delivery is important on the system, the users feedback shown in \ref{fig:sems-announcements-stats} shows that the usage
-of markdown and code highlighting was liked by many users, also users are satisfied with the delivery of the announcements on the system. That shows
-that people are actually interested in having some kind of notifications on announcements, and the look of plain announcements could be boring for
-a lot of people and can not provide enough flexibility for content delivery.
+Tracking the announcements delivery is important on the system. The user feedback shown in \ref{fig:sems-announcements-stats} shows that the usage
+of markdown and code highlighting was liked by more than 80\% of users. Also it shows that users are satisfied by the announcement delivery on the system.
+That shows that people are actually interested in having some kind of notifications on announcements, and the look of plain announcements could be
+boring for a lot of people and can not provide enough flexibility for content delivery.
 
 \includefig{0.85}{sems-slack-stats.png}{Users Feedback about Slack Integration}{fig:sems-slack-stats}
 
 \newParagraph
-In figure \ref{fig:sems-slack-stats} the users are asked about their experience with Slack\texttrademark{} Integration, as expected
-many users are happy with Slack\texttrademark{} integration, this supports the previous point that users likes to be notified
-without having to check the system everytime for new updates. Interestingly about 25\% are not happy with the integration, this could
-be happening because of some problems with the current implementation of the bot that causes a spammy behavior, as the bot posts
-about any update of announcements which causes an instructor editing his announcements but not in final stage to send the notification
-multiple times, this could be fixed by providing a \quotes{preview edits} functionality for instructors.
+In figure \ref{fig:sems-slack-stats} the users were asked about their experience with Slack\texttrademark{} Integration. As expected
+many users were satisfied with Slack\texttrademark{} integration. This supports the previous point that users prefer to be notified
+without having to check the system every time for new updates. Interestingly about 25\% are not happy with the integration. This could
+be happening due to some problems with the current implementation of the bot that causes a spammy behavior on announcement edits as the bot posts
+about any update of announcements which causes an instructor editing his announcements for style changes or typo fixing to send the notification
+multiple times. This could be fixed by providing a \quotes{live preview} functionality for instructors.
 
-\subsection{Overall Feedback}
-\label{sub:overall-feedback}
-Overall feedback from students shows that the majority of students would like to use this system instead of the \ac{met} portal, that
-can show that the development of new systems and/or updating the current course management systems could improve the students satisfaction.
+\section{Overall Feedback}
+\label{sec:overall-feedback}
+Overall feedback from students shows that the majority of students would like to use this system instead of the \ac{met} portal. That
+can show that the development of new systems and/or updating the current course management systems could improve the students satisfaction and
+engagement in university courses.
 \includefig{0.85}{sems-overall-rating.png}{Overall system feedback}{fig:sems-overall-rating}
