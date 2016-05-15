@@ -54,10 +54,6 @@
 - [Mixpanel analytics with meteor][mixpanel-meteor]
 
 
-### Gamification and Reward system :
-- [Starter video][https://www.youtube.com/watch?v=MuDLw1zIc94]
-
-
 ### Schemas and Implementation techniques :
 - [Implementing readable notifications][readable-notifications]
 
@@ -74,7 +70,7 @@
 - [Meteor collections allow/deny vs methods][collection-access-vs-methods]
 - [Common meteor mistakes][common-mistakes]
 - [Meteor Guards - Happy Debugging!][meteor-guards]
-- [Github resources for meteor learning][github-res-meteor-learn]=
+- [Github resources for meteor learning][github-res-meteor-learn]
 - [Reactivity demystified][reactivity]
 - [more on reactive-vars][reactive-vars]
 
